@@ -6,11 +6,14 @@ import Computed from '@/components/computed/computed.vue'
 import Computerexaple from '@/components/computerexaple/computerexaple.vue'
 import WatchRective from '@/components/watchRective/watchRective.vue'
 import watchRef from '@/components/watchRef/watchRef.vue'
+import watchEffect from '@/components/watchEffect/watchEffect.vue'
 import refVsRective from '@/components/refVSrective/refVsRective.vue'
 import deepWatch from '@/components/deepWatch/deepWatch.vue'
 import Reactive from '@/components/reactive/reactive.vue'
 import Ref from '@/components/ref/ref.vue'
 import Fa from '@/components/refOnlyoneMark/fa.vue'
+import Vue3 from '@/components/vue3/vue3.vue'
+import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -66,7 +69,18 @@ const router = createRouter({
       path: '/fa',
       component: Fa
     },
-
+    {
+      path: '/vue3',
+      component: Vue3
+    },
+    {
+      path: '/watchRefPrimitiveType',
+      component: watchRefPrimitiveType
+    },
+    {
+      path: '/watcheffect',
+      component: watchEffect
+    },
   ]
 })
 

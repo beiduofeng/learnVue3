@@ -4,6 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div class="wrapper">
     <div class="left-menu">
+      <RouterLink to="/Vue3">vue3语法规则</RouterLink>
       <RouterLink to="/helloworld">helloworld</RouterLink>
       <RouterLink to="/torefs">torefs</RouterLink>
       <RouterLink to="/p2c">父传子</RouterLink>
@@ -14,8 +15,10 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/refVsRective">ref与rective区别</RouterLink>
       <RouterLink to="/deepWatch">深层监测对象中的某个属性</RouterLink>
       <RouterLink to="/Reactive">reactive创建响应式对象</RouterLink>
+      <RouterLink to="/watchEffect">watchEffect</RouterLink>
       <RouterLink to="/Ref">ref创建响应式对象</RouterLink>
       <RouterLink to="/Fa">ref唯一标识</RouterLink>
+      <RouterLink to="/watchRefPrimitiveType">watch监视ref基本类型数据</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">
