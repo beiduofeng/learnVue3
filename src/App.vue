@@ -7,6 +7,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/helloworld">helloworld</RouterLink>
       <RouterLink to="/torefs">torefs</RouterLink>
       <RouterLink to="/p2c">父传子</RouterLink>
+      <RouterLink to="/computed">computed计算属性</RouterLink>
+      <RouterLink to="/Computerexaple">computed例子</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">
