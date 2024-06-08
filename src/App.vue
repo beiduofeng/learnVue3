@@ -6,6 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="left-menu">
       <RouterLink to="/helloworld">helloworld</RouterLink>
       <RouterLink to="/torefs">torefs</RouterLink>
+      <RouterLink to="/p2c">父传子</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">
