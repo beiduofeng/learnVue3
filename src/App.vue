@@ -9,6 +9,13 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/p2c">父传子</RouterLink>
       <RouterLink to="/computed">computed计算属性</RouterLink>
       <RouterLink to="/Computerexaple">computed例子</RouterLink>
+      <RouterLink to="/WatchRective">监测rective对象型数据</RouterLink>
+      <RouterLink to="/watchRef">监测ref对象型数据</RouterLink>
+      <RouterLink to="/refVsRective">ref与rective区别</RouterLink>
+      <RouterLink to="/deepWatch">深层监测对象中的某个属性</RouterLink>
+      <RouterLink to="/Reactive">reactive创建响应式对象</RouterLink>
+      <RouterLink to="/Ref">ref创建响应式对象</RouterLink>
+      <RouterLink to="/Fa">ref唯一标识</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">
