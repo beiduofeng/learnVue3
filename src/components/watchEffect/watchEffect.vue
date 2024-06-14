@@ -5,6 +5,7 @@
         <h2>水位：{{ height }}</h2>
         <button @click="changehot">温度上升</button>
         <button @click="changeheiht">水位上升</button>
+        <h2>{{ warn }}</h2>
 
     </div>
 </template>
@@ -20,6 +21,7 @@ export default {
 //数据
 let hot = ref(0)
 let height = ref(0)
+let warn = ref('')
 //方法
 function changehot() {
     hot.value += 10
@@ -33,7 +35,7 @@ function changeheiht() {
 //不用写监测对象，watchEffect根据判断条件自动去数据里匹配
 watchEffect(() => {
     if (hot.value >= 60 || height.value >= 50) {
-        console.log("危险预警，快速撤离");
+        warn.value = "危险预警，快速撤离";
 
     }
 })

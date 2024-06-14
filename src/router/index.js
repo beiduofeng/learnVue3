@@ -13,7 +13,9 @@ import Reactive from '@/components/reactive/reactive.vue'
 import Ref from '@/components/ref/ref.vue'
 import Fa from '@/components/refOnlyoneMark/fa.vue'
 import Vue3 from '@/components/vue3/vue3.vue'
+import Hooks from '@/components/hooks/hooks.vue'
 import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
+import usePinia from '@/components/usePinia/usepinia.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -80,6 +82,14 @@ const router = createRouter({
     {
       path: '/watcheffect',
       component: watchEffect
+    },
+    {
+      path: '/hooks',
+      component: Hooks
+    },
+    {
+      path: '/usepinia',
+      component: usePinia
     },
   ]
 })

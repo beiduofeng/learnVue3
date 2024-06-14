@@ -19,6 +19,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/Ref">ref创建响应式对象</RouterLink>
       <RouterLink to="/Fa">ref唯一标识</RouterLink>
       <RouterLink to="/watchRefPrimitiveType">watch监视ref基本类型数据</RouterLink>
+      <RouterLink to="/Hooks">自定义Hooks</RouterLink>
+      <RouterLink to="/usePinia">usePinia</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">
