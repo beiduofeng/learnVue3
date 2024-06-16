@@ -1,6 +1,12 @@
 import { defineStore } from 'pinia'
 
 export const usePiniaStore = defineStore('lizi', {
+    actions: {
+        changeone(value) {
+            return this.useList[0].msg = "震惊，楼价再次暴跌！"
+        }
+    },
+
     //存放数据的地方
     state() {
         return {
@@ -11,4 +17,9 @@ export const usePiniaStore = defineStore('lizi', {
             ]
         }
     },
+    getters: {
+        changemsg(state) {
+            this.useList[0].msg = "1111111"
+        }
+    }
 })

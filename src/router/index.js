@@ -16,6 +16,7 @@ import Vue3 from '@/components/vue3/vue3.vue'
 import Hooks from '@/components/hooks/hooks.vue'
 import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
 import usePinia from '@/components/usePinia/usepinia.vue'
+import todolist from '@/components/ToDoList/todolist.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -90,6 +91,10 @@ const router = createRouter({
     {
       path: '/usepinia',
       component: usePinia
+    },
+    {
+      path: '/todolist',
+      component: todolist
     },
   ]
 })

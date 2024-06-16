@@ -1,7 +1,7 @@
 <template>
     <div class="preson">
        <ul>
-         <li v-for="a in a.useList" :key="a.id">{{a.msg}}</li>
+         <li v-for="a in a.useList" :key="a.id">{{a.msg}}<button @click="change1">修改</button></li>
        </ul>
     </div>
 </template>
@@ -18,7 +18,10 @@ export default {
 <script lang="ts" setup>
 //使用
 const a=usePiniaStore()
-
+function change1(){
+    usePiniaStore.changeone(a.msg)
+    
+}
 </script>
 <style scoped>
 .preson {
