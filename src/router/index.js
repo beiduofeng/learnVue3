@@ -18,13 +18,17 @@ import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPr
 import usePinia from '@/components/usePinia/usepinia.vue'
 import todolist from '@/components/ToDoList/todolist.vue'
 import father from '@/components/byvalue/father.vue'
+
+import { withShowCode } from './utils'
+
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/helloworld',
       name: 'helloworld',
-      component: HelloWorld
+      component: withShowCode(HelloWorld)
     },
     {
       path: '/torefs',
