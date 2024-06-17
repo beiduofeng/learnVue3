@@ -22,6 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/Hooks">自定义Hooks</RouterLink>
       <RouterLink to="/usePinia">usePinia</RouterLink>
       <RouterLink to="/todolist">ToDoList</RouterLink>
+      <RouterLink to="/father">byvalue</RouterLink>
     </div>
     <div class="content-wrapper">
       <div class="content">

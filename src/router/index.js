@@ -17,6 +17,7 @@ import Hooks from '@/components/hooks/hooks.vue'
 import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
 import usePinia from '@/components/usePinia/usepinia.vue'
 import todolist from '@/components/ToDoList/todolist.vue'
+import father from '@/components/byvalue/father.vue'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -95,6 +96,10 @@ const router = createRouter({
     {
       path: '/todolist',
       component: todolist
+    },
+    {
+      path: '/father',
+      component: father
     },
   ]
 })
