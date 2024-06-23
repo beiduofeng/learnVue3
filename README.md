@@ -1,6 +1,12 @@
-# vue-project
+# learn-vue3
 
-This template should help get you started developing with Vue 3 in Vite.
+Example code for learn vue3 with comments.
+
+using:
+
+1. vite
+2. element-plus
+
 
 ## Recommended IDE Setup
 
