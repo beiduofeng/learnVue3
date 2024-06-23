@@ -1,15 +1,17 @@
 <template>
     <div class="cai">
+        <p style="margin-left: 31px;">家庭版评价: {{ jtbpj ? jtbpj.jtbpj : '没有纸' }}分&nbsp &nbsp &nbsp饭店版评价：{{ fdbpj ?
+            fdbpj.fdbpj : '' }}分</p>
         <p>
             <select v-model="currentDish">
                 <option v-for="c in caipin" :key="c"> {{ c }}</option>
             </select>
-            {{ currentDish }}
+
         </p>
         <one ref="jtbpj" :currentDish="currentDish"></one>
-        <two ref="fdbpj"></two>
-        <p style="margin-left: 31px;">家庭版评价: {{ jtbpj ? jtbpj.jtbpj : '没有纸' }}分&nbsp &nbsp &nbsp饭店版评价：{{ fdbpj }}分</p>
-        {{ jtbpj || 'MO' }}
+        <two ref="fdbpj" :currentDish="currentDish"></two>
+
+
     </div>
 
 
