@@ -18,6 +18,7 @@ import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPr
 import usePinia from '@/components/usePinia/usepinia.vue'
 import todolist from '@/components/ToDoList/todolist.vue'
 import father from '@/components/byvalue/father.vue'
+import zong from '@/components/modules/aa.vue'
 
 import { withShowCode } from './utils'
 
@@ -25,6 +26,7 @@ import { withShowCode } from './utils'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
+
     {
       path: '/helloworld',
       name: 'helloworld',
@@ -105,6 +107,11 @@ const router = createRouter({
       path: '/father',
       component: father
     },
+    {
+      path: '/zong',
+      component: zong
+    },
+
   ]
 })
 

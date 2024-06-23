@@ -23,6 +23,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/usePinia">usePinia</RouterLink>
       <RouterLink to="/todolist">ToDoList</RouterLink>
       <RouterLink to="/father">byvalue</RouterLink>
+      <RouterLink to="/zong">组件</RouterLink>
+
     </div>
     <div class="content-wrapper">
       <div class="content">
