@@ -19,6 +19,7 @@ import usePinia from '@/components/usePinia/usepinia.vue'
 import todolist from '@/components/ToDoList/todolist.vue'
 import father from '@/components/byvalue/father.vue'
 import zong from '@/components/modules/aa.vue'
+import Introduction from '@/components/introduction/index.vue';
 
 import { withShowCode } from './utils'
 
@@ -111,7 +112,10 @@ const router = createRouter({
       path: '/zong',
       component: zong
     },
-
+    {
+      path: '/intro',
+      component: Introduction,
+    }
   ]
 })
 
