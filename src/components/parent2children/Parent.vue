@@ -8,20 +8,13 @@
 import Children from './Children.vue'
 import { type persons } from './types'
 import { reactive } from 'vue'
-export default {
-    name: 'App',
-    components: { Children },
-    setup() {
-        //写法1 let personList=reactive<persons>([
-        //写法2
-        let personList: persons = reactive([
-            { id: '001', name: 'zhangsan', age: 18 },
-            { id: '002', name: 'lisi', age: 17 },
-            { id: '003', name: 'wangwu', age: 19 }
-        ])
-        return { personList }
-    }
-}
+</script>
+<script lang="ts" setup>
+let personList: persons = reactive([
+    { id: '001', name: 'zhangsan', age: 18 },
+    { id: '002', name: 'lisi', age: 17 },
+    { id: '003', name: 'wangwu', age: 19 }
+])
 </script>
 
 <style scoped></style>
