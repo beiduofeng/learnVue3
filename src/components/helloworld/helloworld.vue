@@ -2,6 +2,7 @@
     <div class="preson">
         {{msg}}
     </div>
+    <MarkDown :content="HelloWorldContent"/>
 </template>
 <script lang='ts'>
 import { ref } from 'vue'
@@ -12,6 +13,9 @@ export default {
 </script>
 
 <script lang="ts" setup>
+import HelloWorldContent from './helloworld.md?raw'
+import { MarkDown } from '@/common';
+
 //setup自动返回渲染
 //数据
 let msg = ref('hello world')
