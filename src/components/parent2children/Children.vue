@@ -4,6 +4,7 @@
     <ul>
       <li v-for="p in rens" :key="p.id">{{ p.name }}--{{ p.age }}</li>
     </ul>
+    <button @click="addren">添加人</button>
     <p>{{ num }}</p>
   </div>
 </template>
@@ -16,8 +17,10 @@ import { type personInter, type persons } from './types'
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 //接受数据
-const props = defineProps<{ "rens": persons }>()
+
+const props = defineProps(['rens', 'addren'])
 //数据
+
 
 const num = computed(() => {
   let ages = props.rens.filter((item) => {
@@ -26,6 +29,8 @@ const num = computed(() => {
   return ages.length
 })
 console.log(num);
+
+props.addren();
 
 
 
