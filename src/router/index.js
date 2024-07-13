@@ -20,8 +20,12 @@ import todolist from '@/components/ToDoList/todolist.vue'
 import father from '@/components/byvalue/father.vue'
 import zong from '@/components/modules/aa.vue'
 import Introduction from '@/components/introduction/index.vue';
+import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
 
 import { withShowCode } from './utils'
+
+console.log('helloworldCode', helloworldCode);
+
 
 
 const router = createRouter({
@@ -31,7 +35,8 @@ const router = createRouter({
     {
       path: '/helloworld',
       name: 'helloworld',
-      component: withShowCode(HelloWorld)
+      component: HelloWorld,
+      // component: withShowCode(helloworldCode)
     },
     {
       path: '/torefs',

@@ -1,4 +1,4 @@
-export function withShowCode(WrappedComponent) {
+export function withShowCode(code) {
     const relativeFilePath = WrappedComponent.__file;
     const part = relativeFilePath.split('/src')[1];
     const validPath = window.location.origin + '/src' + part;
