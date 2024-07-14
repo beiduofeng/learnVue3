@@ -1,4 +1,12 @@
-# vue-project
+# Learn-Vue3
+
+学习 Vue3 过程中各种示意代码，加深理解，方便查找。
+
+对比学习 https://cn.vuejs.org/guide/essentials/application.html
+
+
+
+# 使用 vite 的默认配置
 
 This template should help get you started developing with Vue 3 in Vite.
 

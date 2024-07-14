@@ -16,7 +16,6 @@ export default {
 //数据
 let msg = ref('hello world')
 
-
 </script>
 <style scoped>
 .preson {
