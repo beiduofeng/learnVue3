@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HelloWorld from '@/components/helloworld/index.vue'
 import ToRefs from '@/components/toRefs/index.vue'
-// import Parent from '@/components/parent2children/Parent.vue'
+import Parent from '@/components/parent2children/index.vue'
 // import Computed from '@/components/computed/computed.vue'
 // import Computerexaple from '@/components/computerexaple/computerexaple.vue'
 // import WatchRective from '@/components/watchRective/watchRective.vue'
@@ -39,11 +39,11 @@ export const routeConfigs = [
     component: ToRefs,
 
   },
-  // {
-  //   path: '/p2c',
-  //   component: import ('@/components/parent2children/Parent.vue'),
+  {
+    path: '/p2c',
+    component: Parent,
 
-  // },
+  },
   // {
   //   path: '/computed',
   //   component: import ('@/components/computed/computed.vue'),
