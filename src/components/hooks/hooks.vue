@@ -7,9 +7,7 @@
 </template>
 
 <script lang="ts">
-export default {
-    name: 'Hooks'
-}
+
 </script>
 <script lang="ts" setup>
 import useDog from '@/hooks/useDog';

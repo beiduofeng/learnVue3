@@ -2,24 +2,24 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HelloWorld from '@/components/helloworld/index.vue'
 import ToRefs from '@/components/toRefs/index.vue'
 import Parent from '@/components/parent2children/index.vue'
-// import Computed from '@/components/computed/computed.vue'
-// import Computerexaple from '@/components/computerexaple/computerexaple.vue'
-// import WatchRective from '@/components/watchRective/watchRective.vue'
-// import watchRef from '@/components/watchRef/watchRef.vue'
-// import watchEffect from '@/components/watchEffect/watchEffect.vue'
-// import refVsRective from '@/components/refVSrective/refVsRective.vue'
-// import deepWatch from '@/components/deepWatch/deepWatch.vue'
-// import Reactive from '@/components/reactive/reactive.vue'
-// import Ref from '@/components/ref/ref.vue'
-// import Fa from '@/components/refOnlyoneMark/fa.vue'
-// import Vue3 from '@/components/vue3/vue3.vue'
-// import Hooks from '@/components/hooks/hooks.vue'
-// import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
-// import usePinia from '@/components/usePinia/usepinia.vue'
-// import todolist from '@/components/ToDoList/todolist.vue'
-// import father from '@/components/byvalue/father.vue'
-// import zong from '@/components/modules/aa.vue'
-// import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
+import Computed from '@/components/computed/index.vue'
+import computerexaple from '@/components/computerexaple/index.vue'
+import watchRective from '@/components/watchRective/index.vue'
+import watchRef from '@/components/watchRef/index.vue'
+import watchEffect from '@/components/watchEffect/index.vue'
+import refVsRective from '@/components/refVSrective/index.vue'
+import deepWatch from '@/components/deepWatch/index.vue'
+import reactive from '@/components/reactive/index.vue'
+import ref from '@/components/ref/index.vue'
+import fa from '@/components/refOnlyoneMark/index.vue'
+import vue3 from '@/components/vue3/index.vue'
+import hooks from '@/components/hooks/indev.vue'
+import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/index.vue'
+import usepinia from '@/components/usePinia/index.vue'
+import todolist from '@/components/ToDoList/index.vue'
+import father from '@/components/byvalue/index.vue'
+import aa from '@/components/modules/index.vue'
+import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
 
 
 /** @file 路由相关的配置 */
@@ -35,6 +35,76 @@ export const routeConfigs = [
     component: HelloWorld,
   },
   {
+    path: "/aa",
+    component: aa,
+
+  },
+  {
+    path: "/helloworldCode",
+    component: helloworldCode,
+
+  },
+  {
+    path: "/watchRefPrimitiveType",
+    component: watchRefPrimitiveType,
+
+  },
+  {
+    path: "/father",
+    component: father,
+
+  },
+  {
+    path: "/vue3",
+    component: vue3,
+
+  },
+  {
+    path: "/watchEffect",
+    component: watchEffect,
+
+  },
+  {
+    path: "/watchRef",
+    component: watchRef,
+
+  },
+  {
+    path: "/watchRective",
+    component: watchRective,
+
+  },
+  {
+    path: "/refVsRective",
+    component: refVsRective,
+
+  },
+  {
+    path: "/usepinia",
+    component: usepinia,
+
+  },
+  {
+    path: "/todolist",
+    component: todolist,
+
+  },
+  {
+    path: "/fa",
+    component: fa,
+
+  },
+  {
+    path: "/ref",
+    component: ref,
+
+  },
+  {
+    path: "/reactive",
+    component: reactive,
+
+  },
+  {
     path: "/torefs",
     component: ToRefs,
 
@@ -44,11 +114,26 @@ export const routeConfigs = [
     component: Parent,
 
   },
-  // {
-  //   path: '/computed',
-  //   component: import ('@/components/computed/computed.vue'),
+  {
+    path: '/computed',
+    component: Computed,
 
-  // },
+  },
+  {
+    path: '/computerexaple',
+    component: computerexaple,
+
+  },
+  {
+    path: '/deepWatch',
+    component: deepWatch,
+
+  },
+  {
+    path: '/hooks',
+    component: hooks,
+
+  },
 ];
 
 

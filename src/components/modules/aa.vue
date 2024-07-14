@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-    name: 'zong',
+
     components: { caipin, hot }
 }
 import { ref, reactive } from 'vue';

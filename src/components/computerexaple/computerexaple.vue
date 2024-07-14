@@ -10,9 +10,7 @@
 
 <script lang='ts'>
 import { ref, reactive, toRefs, toRef, computed } from 'vue'
-export default {
-    name: 'Computerexaple',
-}
+
 </script>
 
 <script lang="ts" setup>
