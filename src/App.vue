@@ -24,6 +24,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/todolist">ToDoList</RouterLink>
       <RouterLink to="/father">byvalue</RouterLink>
       <RouterLink to="/zong">组件</RouterLink>
+      <RouterLink to="/dr">声明式渲染</RouterLink>
 
     </div>
     <div class="content-wrapper">

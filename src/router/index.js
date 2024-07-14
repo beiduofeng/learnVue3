@@ -19,6 +19,7 @@ import usePinia from '@/components/usePinia/usepinia.vue'
 import todolist from '@/components/ToDoList/todolist.vue'
 import father from '@/components/byvalue/father.vue'
 import zong from '@/components/modules/aa.vue'
+import dr from '@/components/Declarative-rendering/dr.vue'
 
 import { withShowCode } from './utils'
 
@@ -26,7 +27,10 @@ import { withShowCode } from './utils'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-
+    {
+      path: '/dr',
+      component: dr,
+    },
     {
       path: '/helloworld',
       name: 'helloworld',
@@ -111,6 +115,7 @@ const router = createRouter({
       path: '/zong',
       component: zong
     },
+
 
   ]
 })
