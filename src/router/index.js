@@ -1,122 +1,61 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HelloWorld from '@/components/helloworld/helloworld.vue'
-import ToRefs from '@/components/toRefs/toRefs.vue'
-import Parent from '@/components/parent2children/Parent.vue'
-import Computed from '@/components/computed/computed.vue'
-import Computerexaple from '@/components/computerexaple/computerexaple.vue'
-import WatchRective from '@/components/watchRective/watchRective.vue'
-import watchRef from '@/components/watchRef/watchRef.vue'
-import watchEffect from '@/components/watchEffect/watchEffect.vue'
-import refVsRective from '@/components/refVSrective/refVsRective.vue'
-import deepWatch from '@/components/deepWatch/deepWatch.vue'
-import Reactive from '@/components/reactive/reactive.vue'
-import Ref from '@/components/ref/ref.vue'
-import Fa from '@/components/refOnlyoneMark/fa.vue'
-import Vue3 from '@/components/vue3/vue3.vue'
-import Hooks from '@/components/hooks/hooks.vue'
-import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
-import usePinia from '@/components/usePinia/usepinia.vue'
-import todolist from '@/components/ToDoList/todolist.vue'
-import father from '@/components/byvalue/father.vue'
-import zong from '@/components/modules/aa.vue'
-import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
+import HelloWorld from '@/components/helloworld/index.vue'
+import ToRefs from '@/components/toRefs/index.vue'
+// import Parent from '@/components/parent2children/Parent.vue'
+// import Computed from '@/components/computed/computed.vue'
+// import Computerexaple from '@/components/computerexaple/computerexaple.vue'
+// import WatchRective from '@/components/watchRective/watchRective.vue'
+// import watchRef from '@/components/watchRef/watchRef.vue'
+// import watchEffect from '@/components/watchEffect/watchEffect.vue'
+// import refVsRective from '@/components/refVSrective/refVsRective.vue'
+// import deepWatch from '@/components/deepWatch/deepWatch.vue'
+// import Reactive from '@/components/reactive/reactive.vue'
+// import Ref from '@/components/ref/ref.vue'
+// import Fa from '@/components/refOnlyoneMark/fa.vue'
+// import Vue3 from '@/components/vue3/vue3.vue'
+// import Hooks from '@/components/hooks/hooks.vue'
+// import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/watchRefPrimitiveType.vue'
+// import usePinia from '@/components/usePinia/usepinia.vue'
+// import todolist from '@/components/ToDoList/todolist.vue'
+// import father from '@/components/byvalue/father.vue'
+// import zong from '@/components/modules/aa.vue'
+// import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
 
-import { withShowCode } from './utils'
 
-console.log('helloworldCode', helloworldCode);
+/** @file 路由相关的配置 */
+
+/**
+ * 路由对应的映射关系
+ */
+export const routeConfigs = [
+  {
+    // 浏览器上地址栏里面的 hash 部分
+    path: "/helloworld",
+    // 组件
+    component:  HelloWorld,
+  },
+  {
+    path: "/torefs",
+    component: ToRefs,
+    
+  },
+  // {
+  //   path: '/p2c',
+  //   component: import ('@/components/parent2children/Parent.vue'),
+    
+  // },
+  // {
+  //   path: '/computed',
+  //   component: import ('@/components/computed/computed.vue'),
+    
+  // },
+];
 
 
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes: [
-
-    {
-      path: '/helloworld',
-      name: 'helloworld',
-      component: HelloWorld,
-      // component: withShowCode(helloworldCode)
-    },
-    {
-      path: '/torefs',
-      name: 'torefs',
-      component: ToRefs,
-    },
-    {
-      path: '/p2c',
-      // name: 'p2c'
-      component: Parent
-    },
-    {
-      path: '/computed',
-      // name: 'p2c'
-      component: Computed
-    },
-    {
-      path: '/computerexaple',
-      component: Computerexaple
-    },
-    {
-      path: '/watchrective',
-      component: WatchRective
-    },
-    {
-      path: '/watchref',
-      component: watchRef
-    },
-    {
-      path: '/refvsrective',
-      component: refVsRective
-    },
-    {
-      path: '/deepwatch',
-      component: deepWatch
-    },
-    {
-      path: '/reactive',
-      component: Reactive
-    },
-    {
-      path: '/ref',
-      component: Ref
-    },
-    {
-      path: '/fa',
-      component: Fa
-    },
-    {
-      path: '/vue3',
-      component: Vue3
-    },
-    {
-      path: '/watchRefPrimitiveType',
-      component: watchRefPrimitiveType
-    },
-    {
-      path: '/watcheffect',
-      component: watchEffect
-    },
-    {
-      path: '/hooks',
-      component: Hooks
-    },
-    {
-      path: '/usepinia',
-      component: usePinia
-    },
-    {
-      path: '/todolist',
-      component: todolist
-    },
-    {
-      path: '/father',
-      component: father
-    },
-    {
-      path: '/zong',
-      component: zong
-    },
-  ]
-})
+  routes: routeConfigs
+});
 
 export default router

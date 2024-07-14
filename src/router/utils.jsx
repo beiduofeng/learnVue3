@@ -1,22 +1,14 @@
-export function withShowCode(code) {
-    const relativeFilePath = WrappedComponent.__file;
-    const part = relativeFilePath.split('/src')[1];
-    const validPath = window.location.origin + '/src' + part;
+/** @file jsx 写法，包裹加入到组件上的通用逻辑 */
 
-    // fetch(validPath).then((response) => response.text())
-    //     .then((data) => console.log(data));
+import { defineComponent } from 'vue';
 
-    return {
-        setup(props, { attrs, slots }) {
+export default wrapper = defineComponent({
 
-            console.log('WrappedComponent', WrappedComponent, validPath)
+  setup (props, { slots }) {
+    return <div>
+      <pre>{ props.codeContent }</pre>
+      { props.children }
+    </div>
+  }
 
-            return () => (
-                <div>
-                    <WrappedComponent {...{ props, attrs, slots }} />
-                    <a href={validPath} >showCode</a>
-                </div>
-            );
-        }
-    };
-}
+});
