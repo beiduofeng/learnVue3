@@ -4,13 +4,13 @@
         <caipin></caipin>
     </div>
     <div class="right">
-        <!-- <hot></hot> -->
+        <hot></hot>
     </div>
 
 </template>
 <script>
 export default {
-
+    name: "aa",
     components: { caipin, hot }
 }
 import { ref, reactive } from 'vue';

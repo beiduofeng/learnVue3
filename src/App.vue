@@ -23,7 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/usePinia">usePinia</RouterLink>
       <RouterLink to="/todolist">ToDoList</RouterLink>
       <RouterLink to="/father">byvalue</RouterLink>
-      <RouterLink to="/zong">组件</RouterLink>
+      <RouterLink to="/aa">点菜</RouterLink>
       <RouterLink to="/dr">声明式渲染</RouterLink>
 
     </div>
@@ -50,11 +50,12 @@ import { RouterLink, RouterView } from 'vue-router'
   padding: 12px 8px;
   display: flex;
   flex-direction: column;
-
-  a {
-    margin-bottom: 8px
-  }
 }
+
+a {
+  margin-bottom: 8px
+}
+
 
 .content-wrapper {
   padding: 12px;

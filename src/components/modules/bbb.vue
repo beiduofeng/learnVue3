@@ -6,7 +6,6 @@
         <p v-show="arr[2]" v-for="s in mxw" :key="s">{{ s }}</p>
         <p style="color: red;">请对该教程打分 <input type="number" v-model="jtbpj"><button>提交</button></p>
     </div>
-
 </template>
 <script>
 export default {

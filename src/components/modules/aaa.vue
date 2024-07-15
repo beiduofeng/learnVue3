@@ -6,15 +6,10 @@
             <select v-model="currentDish">
                 <option v-for="c in caipin" :key="c"> {{ c }}</option>
             </select>
-
         </p>
         <one ref="jtbpj" :currentDish="currentDish"></one>
         <two ref="fdbpj" :currentDish="currentDish"></two>
-
-
     </div>
-
-
 </template>
 <script>
 export default {
