@@ -1,5 +1,5 @@
 <template>
-    <div class="preson">
+    <div class="box">
         姓: <input type="text" v-model="firstname"><br><br>
         名: <input type="text" v-model="lastname"><br><br>
         全名：<span> {{ fullname }}</span>
@@ -8,14 +8,9 @@
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef, computed } from 'vue'
-export default {
-    name: 'Computed',
-}
-</script>
-
 <script lang="ts" setup>
+//引入
+import { ref, reactive, toRefs, toRef, computed } from 'vue'
 //数据
 let firstname = ref('sun')
 let lastname = ref('jinyao')
@@ -40,7 +35,7 @@ let fullname = computed({
 })
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;

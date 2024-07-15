@@ -1,5 +1,5 @@
 <template>
-    <div class="pq">
+    <div class="box">
         <h3>监测 【reactive】 定义的 【对象】类型数据</h3>
         <h2>姓名：{{ person.name }}</h2>
         <h2>年龄：{{ person.age }}</h2>
@@ -10,14 +10,8 @@
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
-export default {
-    name: 'WatchRective',
-}
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
 //数据
 let person = reactive({
     name: '范若若',
@@ -48,7 +42,7 @@ watch(person, (n, old) => {
 },)  //rective默认开启深度监视（且无法关闭），控制台可以查看到监测到的c值
 </script>
 <style scoped>
-.pq {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;

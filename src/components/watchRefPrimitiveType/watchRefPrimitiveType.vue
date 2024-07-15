@@ -1,5 +1,5 @@
 <template>
-    <div class="preson">
+    <div class="box">
         <h3>监测 ref 定义的 基本类型数据</h3>
         <h2>{{ sum }}</h2>
         <button @click="sumadd">点我加1</button>
@@ -7,14 +7,8 @@
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
-export default {
-    name: 'watchRefPrimitiveType',
-}
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
 //数据
 let sum = ref(0)
 //方法
@@ -35,7 +29,7 @@ watch(sum, (newVa) => {
 })
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;

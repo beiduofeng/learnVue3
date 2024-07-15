@@ -1,5 +1,5 @@
 <template>
-    <div class="preson">
+    <div class="box">
         <h3>监测 【ref】 定义的 【对象】类型数据</h3>
         <h2>姓名：{{ person.name }}</h2>
         <h2>年龄：{{ person.age }}</h2>
@@ -9,14 +9,8 @@
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
-export default {
-    name: 'watchRef',
-}
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
 //数据
 let person = ref({
     name: '范若若',
@@ -41,7 +35,7 @@ watch(person, (n, old) => {
 }, { deep: true })
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;

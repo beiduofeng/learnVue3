@@ -1,5 +1,5 @@
 <template>
-    <div class="preson">
+    <div class="box">
         <h2>一辆{{ car.brand }}车，价值{{ car.price }}元</h2>
         <button @click="changeBrand">修改品牌</button>
         <button @click="changePrice">修改价格</button>
@@ -9,15 +9,8 @@
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive } from 'vue'
-//ref创建基本类型响应式数据, 后面还可以创建对象类型
-export default {
-    name: 'refVsRective',
-}
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive } from 'vue'
 //数据
 
 let car = reactive({ brand: '爱玛', price: 1000 })
@@ -42,10 +35,9 @@ function changeCar() {
 function sumadd() {
     sum.value += 1
 }
-
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: skyblue;
     box-shadow: 0 0 10px;
     padding: 20px;

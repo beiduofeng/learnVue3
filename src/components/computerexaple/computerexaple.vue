@@ -1,26 +1,20 @@
 <template>
-    <div class="preson">
+    <div class="box">
         鸡蛋个数: <input type="number" v-model="num"><br><br>
         价钱: 1.2/个<br><br>
         <h3>{{ sum.toFixed(2) }}</h3>
         <button @click="changeSum">修改总价</button>
-
     </div>
 </template>
 
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef, computed } from 'vue'
-
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef, computed } from 'vue'
 //数据
 let num = ref(0)
 //方法
 function changeSum() {
     sum.value = 100
 }
-
 //get函数表示正向计算关系
 
 //计算属性
@@ -34,10 +28,9 @@ let sum = computed({
     }
 })
 console.log(sum);
-
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;

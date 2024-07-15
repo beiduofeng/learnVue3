@@ -1,5 +1,5 @@
 <template>
-  <div class="preson">
+  <div class="box">
   <h3>监测 【reactive或ref】 定义的 【对象】类型数据 【中的某个属性值的变化】</h3>
   <h2>姓名：{{person.name}}</h2>
   <h2>年龄：{{person.age}}</h2>
@@ -10,18 +10,11 @@
    <button @click="changeCa">修改证书1</button>
    <button @click="changeCb">修改证书2</button>
    <button @click="changeC">修改全部证书</button>
-   
   </div>
 </template>
 
-<script lang='ts'>
-import {ref,reactive,toRefs,toRef,computed,watch} from 'vue'
-  export default {
-    name:'deepWatch',
-  }
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef, computed, watch } from 'vue'
     //数据
   let person =reactive({
     name:'范若若',
@@ -71,7 +64,7 @@ import {ref,reactive,toRefs,toRef,computed,watch} from 'vue'
   // })
 </script>
 <style scoped>
- .preson {
+ .box {
     background-color:pink;
     box-shadow:0 0 10px;
     padding:20px;

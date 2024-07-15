@@ -1,24 +1,16 @@
 <template>
-    <div class="preson">
+    <div class="box">
         <h2>姓名：{{ name }}</h2>
         <h2>年龄：{{ age }}</h2>
         <button @click="changeName">修改姓名</button>
         <button @click="changeAge">修改年龄</button>
-
     </div>
     <div>
         展示 ref的基本用法
     </div>
 </template>
-
-<script lang='ts'>
-import { ref, reactive, toRefs, toRef } from 'vue'
-export default {
-    name: 'ToRefs',
-}
-</script>
-
 <script lang="ts" setup>
+import { ref, reactive, toRefs, toRef } from 'vue'
 //数据
 let person = reactive({
     name: '张三',
@@ -39,7 +31,7 @@ function changeAge() {
 
 </script>
 <style scoped>
-.preson {
+.box {
     background-color: pink;
     box-shadow: 0 0 10px;
     padding: 20px;
