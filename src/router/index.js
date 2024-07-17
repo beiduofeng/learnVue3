@@ -26,7 +26,7 @@ import helloworld from '@/components/VuejsExample/helloworld.vue'
 import userInput from '@/components/VuejsExample/user-input.vue'
 import attributeBinding from '@/components/VuejsExample/attribute-binding.vue'
 import conditionsCycles from '@/components/VuejsExample/conditions-cycles.vue'
-
+import formBinding from '@/components/VuejsExample/form-binding.vue'
 
 
 
@@ -65,8 +65,8 @@ export const routeConfigs = [
     component: conditionsCycles,
   },
   {
-    path: "/4",
-    component: conditionsCycles,
+    path: "/5",
+    component: formBinding,
   },
   {
     path: "/4",

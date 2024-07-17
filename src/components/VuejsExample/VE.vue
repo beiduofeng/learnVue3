@@ -5,6 +5,8 @@
             <RouterLink to="/2">用户输入处理</RouterLink>
             <RouterLink to="/3">Attribute绑定</RouterLink>
             <RouterLink to="/4">条件与循环</RouterLink>
+            <RouterLink to="/5">表单绑定</RouterLink>
+
         </div>
         <div id="right">
             <RouterView />
