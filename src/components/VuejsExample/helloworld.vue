@@ -6,3 +6,4 @@
 import { ref } from 'vue'
 const message = ref("hello,world !")
 </script>
+<style scoped></style>

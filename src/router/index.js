@@ -27,8 +27,8 @@ import userInput from '@/components/VuejsExample/user-input.vue'
 import attributeBinding from '@/components/VuejsExample/attribute-binding.vue'
 import conditionsCycles from '@/components/VuejsExample/conditions-cycles.vue'
 import formBinding from '@/components/VuejsExample/form-binding.vue'
-
-
+import simpleComponents from '@/components/VuejsExample/simple-components.vue'
+import markdownEditor from '@/components/VuejsExample/markdown-editor.vue'
 
 
 /** @file 路由相关的配置 */
@@ -69,8 +69,24 @@ export const routeConfigs = [
     component: formBinding,
   },
   {
-    path: "/4",
-    component: conditionsCycles,
+    path: "/6",
+    component: simpleComponents,
+  },
+  {
+    path: "/7",
+    component: markdownEditor,
+  },
+  {
+    path: "/8",
+    component: markdownEditor,
+  },
+  {
+    path: "/9",
+    component: markdownEditor,
+  },
+  {
+    path: "/10",
+    component: markdownEditor,
   },
   {
     path: "/aa",
