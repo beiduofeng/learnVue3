@@ -1,0 +1,53 @@
+<template>
+    <div id="concent">
+        <div id="left">
+            <RouterLink to="/1">你好，世界！</RouterLink><br>
+            <RouterLink to="/2">用户输入处理</RouterLink>
+
+        </div>
+        <div id="right">
+            <RouterView />
+        </div>
+    </div>
+
+    <!-- <CodeWrapper :codeContent="helloworldCode" /> -->
+
+
+
+</template>
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router';
+import helloworldCode from './helloworld.vue?raw';
+import { CodeWrapper } from '@/common';
+import helloworld from './helloworld.vue';
+import userInput from './user-input.vue';
+</script>
+
+<style scoped>
+#concent {
+    display: flex;
+    border-bottom: 2px solid rgb(31, 28, 28);
+    border-top: 2px solid rgb(21, 19, 19);
+}
+
+#left {
+    width: 160px;
+    min-height: 600px;
+    overflow-y: auto;
+    background-color: rgba(121, 175, 180, 0.933);
+    border: 1px solid rgb(123, 228, 230);
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    float: right;
+    width: 1009px;
+    margin-left: 10px;
+    min-height: 600px;
+    background-color: rgb(216, 231, 226);
+    border: 1px solid rgb(199, 225, 226);
+}
+</style>

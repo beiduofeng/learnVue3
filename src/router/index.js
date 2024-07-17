@@ -21,6 +21,9 @@ import father from '@/components/byvalue/index.vue'
 import aa from '@/components/modules/index.vue'
 import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
 
+import VE from '@/components/VuejsExample/VE.vue'
+import helloworld from '@/components/VuejsExample/helloworld.vue'
+import userInput from '@/components/VuejsExample/user-input.vue'
 
 /** @file 路由相关的配置 */
 
@@ -33,6 +36,19 @@ export const routeConfigs = [
     path: "/helloworld",
     // 组件
     component: HelloWorld,
+  },
+  {
+    path: "/VE",
+    component: VE,
+
+  },
+  {
+    path: "/1",
+    component: helloworld,
+  },
+  {
+    path: "/2",
+    component: userInput,
   },
   {
     path: "/aa",
