@@ -24,6 +24,12 @@ import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
 import VE from '@/components/VuejsExample/VE.vue'
 import helloworld from '@/components/VuejsExample/helloworld.vue'
 import userInput from '@/components/VuejsExample/user-input.vue'
+import attributeBinding from '@/components/VuejsExample/attribute-binding.vue'
+import conditionsCycles from '@/components/VuejsExample/conditions-cycles.vue'
+
+
+
+
 
 /** @file 路由相关的配置 */
 
@@ -49,6 +55,22 @@ export const routeConfigs = [
   {
     path: "/2",
     component: userInput,
+  },
+  {
+    path: "/3",
+    component: attributeBinding,
+  },
+  {
+    path: "/4",
+    component: conditionsCycles,
+  },
+  {
+    path: "/4",
+    component: conditionsCycles,
+  },
+  {
+    path: "/4",
+    component: conditionsCycles,
   },
   {
     path: "/aa",

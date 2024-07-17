@@ -3,7 +3,8 @@
         <div id="left">
             <RouterLink to="/1">你好，世界！</RouterLink><br>
             <RouterLink to="/2">用户输入处理</RouterLink>
-
+            <RouterLink to="/3">Attribute绑定</RouterLink>
+            <RouterLink to="/4">条件与循环</RouterLink>
         </div>
         <div id="right">
             <RouterView />
@@ -22,6 +23,8 @@ import helloworldCode from './helloworld.vue?raw';
 import { CodeWrapper } from '@/common';
 import helloworld from './helloworld.vue';
 import userInput from './user-input.vue';
+import attributeBinding from './attribute-binding.vue';
+import conditionCycles from './conditions-cycles.vue'
 </script>
 
 <style scoped>
