@@ -30,7 +30,7 @@ import formBinding from '@/components/VuejsExample/form-binding.vue'
 import simpleComponents from '@/components/VuejsExample/simple-components.vue'
 import markdownEditor from '@/components/VuejsExample/markdown-editor.vue'
 import getdata from '@/components/VuejsExample/getdata.vue'
-
+import grid from '@/components/VuejsExample/grid.vue'
 /** @file 路由相关的配置 */
 
 /**
@@ -82,7 +82,7 @@ export const routeConfigs = [
   },
   {
     path: "/9",
-    // component: markdownEditor,
+    component: grid,
   },
   {
     path: "/10",
