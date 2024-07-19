@@ -10,6 +10,7 @@
             <RouterLink to="/7">markdown编辑器</RouterLink>
             <RouterLink to="/8">获取数据</RouterLink>
             <RouterLink to="/9">有排序和过滤器的网格</RouterLink>
+            <RouterLink to="/10">树状视图</RouterLink>
 
 
         </div>
@@ -35,6 +36,7 @@ import conditionCycles from './conditions-cycles.vue';
 import markdownEditor from './markdown-editor.vue';
 import getdata from './getdata.vue'
 import grid from './grid.vue'
+import tree from './tree.vue'
 </script>
 
 <style scoped>
