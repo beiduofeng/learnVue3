@@ -29,7 +29,7 @@ import conditionsCycles from '@/components/VuejsExample/conditions-cycles.vue'
 import formBinding from '@/components/VuejsExample/form-binding.vue'
 import simpleComponents from '@/components/VuejsExample/simple-components.vue'
 import markdownEditor from '@/components/VuejsExample/markdown-editor.vue'
-
+import getdata from '@/components/VuejsExample/getdata.vue'
 
 /** @file 路由相关的配置 */
 
@@ -78,15 +78,15 @@ export const routeConfigs = [
   },
   {
     path: "/8",
-    component: markdownEditor,
+    component: getdata,
   },
   {
     path: "/9",
-    component: markdownEditor,
+    // component: markdownEditor,
   },
   {
     path: "/10",
-    component: markdownEditor,
+    // component: markdownEditor,
   },
   {
     path: "/aa",

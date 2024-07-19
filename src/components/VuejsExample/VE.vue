@@ -8,6 +8,7 @@
             <RouterLink to="/5">表单绑定</RouterLink>
             <RouterLink to="/6">简单组件</RouterLink>
             <RouterLink to="/7">markdown编辑器</RouterLink>
+            <RouterLink to="/8">获取数据</RouterLink>
 
 
         </div>
@@ -30,7 +31,8 @@ import helloworld from './helloworld.vue';
 import userInput from './user-input.vue';
 import attributeBinding from './attribute-binding.vue';
 import conditionCycles from './conditions-cycles.vue';
-import markdownEditor from './markdown-editor.vue' 
+import markdownEditor from './markdown-editor.vue';
+import getdata from './getdata.vue'
 </script>
 
 <style scoped>

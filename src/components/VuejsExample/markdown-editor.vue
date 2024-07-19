@@ -10,7 +10,7 @@ import { marked } from 'markdown'
 import { debounce } from 'lodash-es'
 import { ref, computed } from 'vue'
 
-const input = ref('#hello')
+const input = ref('# hello')
 const output = computed(() => {
     marked(input.value)
 })
