@@ -1,15 +1,14 @@
 <template>
   <ToRefs />
-  <!-- <MarkDown :content="HelloWorldContent"/> -->
-  <CodeWrapper :codeContent="toRefCode"/>
+  <MarkDown :content="toRefsContent" />
+  <CodeWrapper :codeContent="toRefCode" />
 </template>
 
 <script setup>
-// import toRefContent from './.md?raw';
+import toRefsContent from './torefs.md?raw';
 import toRefCode from './toRefs.vue?raw';
 import { MarkDown, CodeWrapper } from '@/common';
 import ToRefs from './toRefs.vue';
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

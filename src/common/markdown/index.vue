@@ -13,7 +13,7 @@ import { getMarkDownIt } from '../../utils/index';
 const props = defineProps({ content: String });
 const md = getMarkDownIt();
 // 将 markdown 文件字符串 ‘翻译’ 成 html 字符串
-const htmlResult = md.render(props.content);
+const htmlResult = md.render(`${props.content}`);
 </script>
 
 <style scoped>
@@ -22,10 +22,10 @@ const htmlResult = md.render(props.content);
   min-height: 400px;
   border: 1px solid tomato;
   padding: 12px;
+}
 
-  .tip {
-    text-align: right;
-    font-size: 12px;
-  }
+.tip {
+  text-align: right;
+  font-size: 12px;
 }
 </style>
