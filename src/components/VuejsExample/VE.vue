@@ -13,6 +13,7 @@
             <RouterLink to="/10">树状视图</RouterLink>
             <RouterLink to="/11">svg图像</RouterLink>
             <RouterLink to="/12">带过渡动效的模态框</RouterLink>
+            <RouterLink to="/13">带过渡动效的列表</RouterLink>
 
 
         </div>
@@ -42,6 +43,7 @@ import tree from './tree.vue'
 import svg from './svg.vue'
 import modalbox from './modal.vue'
 import modalboxVue from './modalbox.vue';
+import list from './list.vue'
 </script>
 
 <style scoped>
