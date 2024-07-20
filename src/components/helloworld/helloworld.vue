@@ -4,10 +4,9 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
 //setup自动返回渲染
 //数据
-let msg = ref('hello world')
+const msg = 'hello world'
 </script>
 <style scoped>
 .box {
