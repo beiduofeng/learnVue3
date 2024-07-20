@@ -33,6 +33,7 @@ import getdata from '@/components/VuejsExample/getdata.vue'
 import grid from '@/components/VuejsExample/grid.vue'
 import tree from '@/components/VuejsExample/tree.vue'
 import svg from '@/components/VuejsExample/svg.vue'
+import modalbox from '@/components/VuejsExample/modal.vue'
 /** @file 路由相关的配置 */
 
 /**
@@ -93,6 +94,10 @@ export const routeConfigs = [
   {
     path: "/11",
     component: svg,
+  },
+  {
+    path: "/12",
+    component: modalbox,
   },
   {
     path: "/aa",

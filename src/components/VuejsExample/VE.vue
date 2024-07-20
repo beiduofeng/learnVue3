@@ -12,6 +12,7 @@
             <RouterLink to="/9">有排序和过滤器的网格</RouterLink>
             <RouterLink to="/10">树状视图</RouterLink>
             <RouterLink to="/11">svg图像</RouterLink>
+            <RouterLink to="/12">带过渡动效的模态框</RouterLink>
 
 
         </div>
@@ -39,6 +40,8 @@ import getdata from './getdata.vue'
 import grid from './grid.vue'
 import tree from './tree.vue'
 import svg from './svg.vue'
+import modalbox from './modal.vue'
+import modalboxVue from './modalbox.vue';
 </script>
 
 <style scoped>
