@@ -11,6 +11,7 @@
             <RouterLink to="/8">获取数据</RouterLink>
             <RouterLink to="/9">有排序和过滤器的网格</RouterLink>
             <RouterLink to="/10">树状视图</RouterLink>
+            <RouterLink to="/11">svg图像</RouterLink>
 
 
         </div>
@@ -37,6 +38,7 @@ import markdownEditor from './markdown-editor.vue';
 import getdata from './getdata.vue'
 import grid from './grid.vue'
 import tree from './tree.vue'
+import svg from './svg.vue'
 </script>
 
 <style scoped>
