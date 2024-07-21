@@ -25,6 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/father">byvalue</RouterLink>
       <RouterLink to="/aa">点菜</RouterLink>
       <RouterLink to="/VE">Vuejs示例</RouterLink>
+      <RouterLink to="/practive">作业练习</RouterLink>
 
     </div>
     <div class="content-wrapper">

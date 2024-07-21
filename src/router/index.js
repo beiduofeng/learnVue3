@@ -20,6 +20,7 @@ import todolist from '@/components/ToDoList/index.vue'
 import father from '@/components/byvalue/index.vue'
 import aa from '@/components/modules/index.vue'
 import helloworldCode from '@/components/helloworld/helloworld.vue?raw'
+import practive from '@/components/practice/index.vue'
 
 import VE from '@/components/VuejsExample/VE.vue'
 import helloworld from '@/components/VuejsExample/helloworld.vue'
@@ -35,6 +36,10 @@ import tree from '@/components/VuejsExample/tree.vue'
 import svg from '@/components/VuejsExample/svg.vue'
 import modalbox from '@/components/VuejsExample/modal.vue'
 import list from '@/components/VuejsExample/list.vue'
+
+import a from '@/components/practice/index.vue'
+import person from '@/components/practice/person.vue'
+
 /** @file 路由相关的配置 */
 
 /**
@@ -46,6 +51,16 @@ export const routeConfigs = [
     path: "/helloworld",
     // 组件
     component: HelloWorld,
+  },
+  {
+    path: "/a",
+    component: a,
+
+  },
+  {
+    path: "/11",
+    component: person,
+
   },
   {
     path: "/VE",
@@ -202,6 +217,11 @@ export const routeConfigs = [
   {
     path: '/hooks',
     component: hooks,
+
+  },
+  {
+    path: "/practive",
+    component: practive,
 
   },
 ];
