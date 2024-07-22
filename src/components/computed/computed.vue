@@ -5,13 +5,15 @@
         全名：<span> {{ fullname }}</span>
         <button @click="changeFallName">点击修改全名</button>
 
+
     </div>
 </template>
 
 <script lang="ts" setup>
 //引入
-import { ref, reactive, toRefs, toRef, computed } from 'vue'
+import { ref, computed, defineProps } from 'vue'
 //数据
+
 let firstname = ref('sun')
 let lastname = ref('jinyao')
 //方法

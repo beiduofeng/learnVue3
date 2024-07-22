@@ -1,21 +1,22 @@
 <template>
   <div class="code-container">
-    <div class="tip">code</div>
+    <div class="tip">{{ props.name }}</div>
     <div v-html="htmlResult"></div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { getCodeHtml  } from '@/utils/index';
-
+import { getCodeHtml } from '@/utils/index';
 const props = defineProps({
   codeContent: String,
+  name: String,
 });
+
 
 const htmlResult = ref('');
 
-async function setHtmlResult () {
+async function setHtmlResult() {
   const code = props.codeContent || '';
   htmlResult.value = await getCodeHtml(code);
 }
@@ -24,7 +25,6 @@ setHtmlResult();
 </script>
 
 <style scoped>
-
 .code-container {
   margin-top: 12px;
   padding: 0px 4px;
@@ -52,5 +52,4 @@ setHtmlResult();
   border-radius: 4px;
   min-width: 60px;
 }
-
 </style>
