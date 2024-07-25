@@ -17,6 +17,10 @@
     <p v-if="n == 10">{{ pricefood[0] }}</p>
     <p v-else-if="n == 20">{{ pricefood[1] }}</p>
     <p v-else-if="n == 30">{{ pricefood[2] }}</p>
+    <p>想吃啥?搜<input type="text" :value="xiangchisha" @focus="f" @change="ch" @blur="bl"></p>
+    <p style="color: red;" v-if="xcs">很抱歉，没有!</p>
+    <p>买张彩票吧，请输入0~99之间的任意数<input type="number" :value="goodnum" @change="goodnumchange" @focus="caipiaofocus"></p>
+    <p>{{ jieguo }}</p>
 </template>
 <script setup>
 import { ref, reactive } from 'vue';
@@ -48,6 +52,41 @@ const ershi = () => {
 }
 const sanshi = () => {
     n.value = 30
+}
+let xiangchisha = ref('开封八大碗')
+let xcs = ref(false)
+const f = () => {
+    xiangchisha.value = ''
+    xcs.value = false
+}
+const ch = () => {
+    xcs.value = true
+}
+const bl = () => {
+    xiangchisha.value = '开封八大碗'
+    xcs.value = false
+}
+let goodnum = ref()
+let jieguo = ref('')
+let wins = reactive([
+    { num: 73, monery: 100000000 },
+    { num: 51, monery: 10000 },
+    { num: 22, monery: 100 }
+])
+const goodnumchange = () => {
+    if (goodnum.value == wins[0].num) {
+        jieguo.value = `一等奖，奖金${wins[0].monery}元`
+    } else if (goodnum.value == wins[1].num) {
+        jieguo.value = `二等奖，奖金${wins[1].monery}元`
+    } else if (goodnum.value == wins[2].num) {
+        jieguo.value = `三等奖，奖金${wins[2].monery}元`
+    } else {
+        jieguo.value = '没中奖，再来一张吧'
+    }
+}
+const caipiaofocus = () => {
+
+
 }
 </script>
 <style scoped>
