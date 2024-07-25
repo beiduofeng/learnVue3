@@ -36,6 +36,7 @@ import tree from '@/components/VuejsExample/tree.vue'
 import svg from '@/components/VuejsExample/svg.vue'
 import modalbox from '@/components/VuejsExample/modal.vue'
 import list from '@/components/VuejsExample/list.vue'
+import review from '@/components/VuejsExample/review.vue'
 
 import a from '@/components/practice/index.vue'
 import person from '@/components/practice/person.vue'
@@ -118,6 +119,10 @@ export const routeConfigs = [
   {
     path: "/13",
     component: list,
+  },
+  {
+    path: "/14",
+    component: review,
   },
   {
     path: "/aa",
