@@ -2,10 +2,16 @@
     <div class="box">
         {{ msg }}
     </div>
+    <template>
+        <p :v-show="sh">template会显示吗</p>
+    </template>
+
 </template>
 <script lang="ts" setup>
 //setup自动返回渲染
 //数据
+
+const sh = true
 const msg = 'hello world'
 </script>
 <style scoped>

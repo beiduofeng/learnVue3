@@ -1,4 +1,6 @@
 <template>
+    <a
+        href="https://www.bilibili.com/video/BV1nV411Q7RX?p=10&spm_id_from=pageDriver&vd_source=480c28921b1b6c12cb33e4a6f0a94947">b站讲解更详细</a>
     <p>表单绑定</p>
 
     <h2>文本输入框</h2>
