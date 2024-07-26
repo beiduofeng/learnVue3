@@ -40,6 +40,7 @@ import review from '@/components/VuejsExample/review.vue'
 
 import a from '@/components/practice/index.vue'
 import person from '@/components/practice/person.vue'
+import pictures from '@/components/practice/pictures.vue'
 
 /** @file 路由相关的配置 */
 
@@ -61,6 +62,11 @@ export const routeConfigs = [
   {
     path: "/11",
     component: person,
+
+  },
+  {
+    path: "/12",
+    component: pictures,
 
   },
   {

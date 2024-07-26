@@ -1,8 +1,8 @@
 <template>
     <div id="concent">
         <div id="left">
-            <RouterLink to="/a">a</RouterLink>
-            <RouterLink to="/11">作业1</RouterLink>
+            <RouterLink to="/11">列表添加数据</RouterLink>
+            <RouterLink to="/12">轮播图</RouterLink>
 
 
         </div>
@@ -22,6 +22,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import { CodeWrapper } from '@/common';
 import aCode from './a.vue?raw';
 import a from './a.vue'
+import pictures from './pictures.vue'
 
 </script>
 
