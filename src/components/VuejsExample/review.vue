@@ -1,13 +1,13 @@
 <template>
     <h3>复习</h3>
-    <p>今天喝了一杯
-        <span class="red">{{ name }}</span>,它居然 <span class="red">{{ price }}</span> 元,看了看配料，里面有: <span class="red"
-            v-for="i in ingredieat">{{
+    <p>今天喝了一杯ref()
+        <span class="red">{{ name }}</span>,它居然 <span class="red">{{ price }}</span> 元,看了看配料，里面有reaction([]): <span
+            class="red" v-for="i in ingredieat">{{
                 i }},</span>
     </p>
     <p>
-        今天晚餐有水果 <span class="red">{{ dinner.fruit }}</span>，蔬菜 <span class="red">{{ dinner.vegetable }}</span>，主食 <span
-            class="red">{{ dinner.food }}</span>
+        今天晚餐有reaction({})水果 <span class="red">{{ dinner.fruit }}</span>，蔬菜 <span class="red">{{ dinner.vegetable
+            }}</span>，主食 <span class="red">{{ dinner.food }}</span>
     </p>
     <h4>明天吃什么？</h4>
     <button @click="see">点击参考</button>
@@ -21,6 +21,29 @@
     <p style="color: red;" v-if="xcs">很抱歉，没有!</p>
     <p>买张彩票吧，请输入0~99之间的任意数<input type="number" :value="goodnum" @change="goodnumchange" @focus="caipiaofocus"></p>
     <p>{{ jieguo }}</p>
+    <h5> 单向数据绑定:value 当数据发生改变时, 视图会自动更新. 但用户手动更改 input 的值, 数据不会自动更新</h5>
+    单向数据绑定 <input type="text" :value="name">
+    <h5>双向数据绑定 当数据发生改变时, 视图会自动更新. 当用户手动更改 input 的值, 数据也会自动更新对于 input框, v-model 绑定的是 input 元素的 value 属性</h5>
+    双向数据绑定 <input type="text" v-model="modalvalue">
+    <h5 type="text"> 单选框:对于 input type="radio">, v-model 绑定的是 input 元素的选中状态</h5>
+    <input type="radio" v-model="data.radio" value="1">写作
+    <input type="radio" v-model="data.radio" value="2">画画
+    <h5>复选框: 对于 input type="checkbox">, v-model 绑定的是 input 元素的选中状态</h5>
+    <input type="checkbox" v-model="data.checkbox" value="a">写作
+    <input type="checkbox" v-model="data.checkbox" value="b">画画
+    <input type="checkbox" v-model="data.checkbox" value="c">运动
+    <h5>记住密码</h5>
+    <input type="checkbox" v-model="data.remember1">记住账号
+    <input type="checkbox" v-model="data.remember2">记住密码
+    <h5>下拉框：对于 《select>, v-model 绑定的是 select 元素的选中状态</h5>
+    <select v-model="data.select">
+        <option value="">请选择</option>
+        <option value="A">写作</option>
+        <option value="B">画画</option>
+        <option value="C">运动</option>
+    </select>
+
+    <div class="footer"></div>
 </template>
 <script setup>
 import { ref, reactive } from 'vue';
@@ -88,9 +111,25 @@ const caipiaofocus = () => {
 
 
 }
+let modalvalue = ref('modalvalue')
+const data = reactive({
+    text: "dengruicode.com", //文本框
+    radio: "", //单选框
+    checkbox: [], //复选框
+    remember1: false, //单个复选框-记住密码
+    remember2: false,
+    select: "" //下拉框
+})
+
+
+
 </script>
 <style scoped>
 .red {
     color: red;
+}
+
+.footer {
+    height: 160px;
 }
 </style>
