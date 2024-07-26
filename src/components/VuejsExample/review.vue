@@ -35,18 +35,30 @@
     <h5>记住密码</h5>
     <input type="checkbox" v-model="data.remember1">记住账号
     <input type="checkbox" v-model="data.remember2">记住密码
-    <h5>下拉框：对于 《select>, v-model 绑定的是 select 元素的选中状态</h5>
+    <h5>下拉框：对于 select>, v-model 绑定的是 select 元素的选中状态</h5>
     <select v-model="data.select">
         <option value="">请选择</option>
         <option value="A">写作</option>
         <option value="B">画画</option>
         <option value="C">运动</option>
     </select>
+    <p>实时渲染 <input type="text" v-model="data.text"> </p>
+    <p>在失去焦点或按下回车键之后渲染 <input type="text" v-model.lazy="data.text"> </p>
+    <!-- 输入 100人, data.nums 的值仍为 100 -->
+    <p> 输入框的值转换为数字类型 <input type="text" v-model.number="tonumber">??????????????</p>
+    <p>去除首尾空格 <input type="text" v-model.trim="data.text"></p>
+    <h5>v-text ,v-html</h5>
+    <p v-text="texthtml.url"> </p>
+    <p v-html="texthtml.url"></p>
+    <h5>方法-无缓存</h5>
+    <h5>计算属性-有缓存 [计算属性根据其依赖的响应式数据变化而重新计算]</h5>
+    <h5>侦听器watch</h5>
 
     <div class="footer"></div>
 </template>
 <script setup>
 import { ref, reactive } from 'vue';
+import A from '../practice/a.vue';
 let name = ref('草莓啵啵冰')
 let price = ref(18)
 let ingredieat = reactive(['草莓泥', '爆爆珠', '冰沙', '糖浆', '茉莉茶汤'])
@@ -113,13 +125,18 @@ const caipiaofocus = () => {
 }
 let modalvalue = ref('modalvalue')
 const data = reactive({
-    text: "dengruicode.com", //文本框
+    text: "sjycode.com", //文本框
     radio: "", //单选框
     checkbox: [], //复选框
     remember1: false, //单个复选框-记住密码
     remember2: false,
     select: "" //下拉框
 })
+let tonumber = ref()
+let texthtml = reactive({
+    url: "<i>http://127.0.0.1:5173/?newlabel=d#/14</i>"
+})
+
 
 
 
