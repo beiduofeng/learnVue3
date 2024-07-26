@@ -52,12 +52,46 @@
     <p v-html="texthtml.url"></p>
     <h5>方法-无缓存</h5>
     <h5>计算属性-有缓存 [计算属性根据其依赖的响应式数据变化而重新计算]</h5>
-    <h5>侦听器watch</h5>
+    <h5>侦听器watch::::: ref('')------ reaction({})------- reaction({某个属性})</h5>
+    <select class="selectt" v-model="hobby">
+        <option value="">请选择爱好</option>
+        <option value="写作">写作</option>
+        <option value="画画">画画</option>
+        <option value="运动">运动</option>
+        <option value="跳舞">跳舞</option>
+        <option value="英语">英语</option>
+    </select>
+    <select class="selectt" v-model="date.year">
+        <option value="">请选择年份</option>
+        <option value="2023">2024</option>
+        <option value="2024">2025</option>
+        <option value="2025">2026</option>
+        <option value="2024">2027</option>
+        <option value="2025">2028</option>
+    </select>
+    <select class="selectt" v-model="date.month">
+        <option value="">请选择月份</option>
+        <option value="10">8</option>
+        <option value="11">9</option>
+        <option value="12">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+        <option value="12">1</option>
+        <option value="12">2</option>
+        <option value="10">3</option>
+        <option value="11">4</option>
+        <option value="12">5</option>
+        <option value="11">6</option>
+        <option value="12">7</option>
+    </select>
+    <p>{{ newyear }}年{{ newmonth }}要学习{{ newhobby }}</p>
+
+
 
     <div class="footer"></div>
 </template>
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, watch, watchEffect } from 'vue';
 import A from '../practice/a.vue';
 let name = ref('草莓啵啵冰')
 let price = ref(18)
@@ -136,10 +170,40 @@ let tonumber = ref()
 let texthtml = reactive({
     url: "<i>http://127.0.0.1:5173/?newlabel=d#/14</i>"
 })
-
-
-
-
+let hobby = ref('')
+const date = reactive({ //日期
+    year: "",
+    month: ""
+})
+let newhobby = ref('')
+watch(hobby, (newvalue, oldvalue) => {
+    newhobby = newvalue
+})
+//监听 date
+let newyear = ref()
+let newmonth = ref()
+watch(date, (newValue, oldValue) => {
+    /*
+        JS中对象和数组是通过引用传递的, 而不是通过值传递
+        当修改对象或数组的值时, 实际上修改的是对象或数组的引用, 而不是创建一个新的对象或数组
+        所以，如果修改了对象或数组的值，那么打印出来的结果则是修改后的值
+    */
+    console.log("oldValue", oldValue, "newValue", newValue)
+    newyear = newValue.year
+    newmonth = newValue.month
+})
+//监听 date 中的某个属性 year
+watch(() => date.year, (newValue, oldValue) => {
+    console.log("oldValue", oldValue, "newValue", newValue)
+})
+/*
+       watch需要显式指定要监听的属性, 并且只有当监听的属性发生变化时才会执行
+       若需要更精细地控制或需要获取到原值, 需要使用watch
+*/
+//自动监听
+watchEffect(() => {
+    console.log('监听开始，hobby.value data.year data.month所有的数据豆浆被监测到');
+})
 </script>
 <style scoped>
 .red {
