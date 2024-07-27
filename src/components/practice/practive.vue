@@ -4,6 +4,7 @@
             <RouterLink to="/11">列表添加数据</RouterLink>
             <RouterLink to="/12">轮播图</RouterLink>
             <RouterLink to="/13">记事本</RouterLink>
+            <RouterLink to="/14">购物车</RouterLink>
 
 
         </div>
@@ -25,6 +26,7 @@ import aCode from './a.vue?raw';
 import a from './a.vue'
 import pictures from './pictures.vue'
 import notepad from './notepad.vue'
+import shopping from './shopping.vue'
 
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <ol>
-        <li v-for="item in rens" :key="rens.id">{{ item }}</li>
+        <li v-for="item in rens" :key="item.id">{{ item.name }}的年龄{{ item.age }}岁</li>
     </ol>
     <button @click="addren">add</button>
 </template>

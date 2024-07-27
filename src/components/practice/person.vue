@@ -13,7 +13,7 @@ let personList = reactive([
 ])
 const addren = () => {
     const len = personList.length;
-    personList.push({ id: `${len + 1}`, name: `li ${len + 1}`, age: 18 })
+    personList.push({ id: `${len + 1}`, name: `li ${len}`, age: 18 })
 }
 </script>
 

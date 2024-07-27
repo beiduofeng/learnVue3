@@ -42,6 +42,7 @@ import a from '@/components/practice/index.vue'
 import person from '@/components/practice/person.vue'
 import pictures from '@/components/practice/pictures.vue'
 import notepad from '@/components/practice/notepad.vue'
+import shopping from '@/components/practice/shopping.vue'
 
 /** @file 路由相关的配置 */
 
@@ -73,6 +74,11 @@ export const routeConfigs = [
   {
     path: "/13",
     component: notepad,
+
+  },
+  {
+    path: "/14",
+    component: shopping,
 
   },
   {
