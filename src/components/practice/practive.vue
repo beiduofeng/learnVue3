@@ -3,6 +3,7 @@
         <div id="left">
             <RouterLink to="/11">列表添加数据</RouterLink>
             <RouterLink to="/12">轮播图</RouterLink>
+            <RouterLink to="/13">记事本</RouterLink>
 
 
         </div>
@@ -23,6 +24,7 @@ import { CodeWrapper } from '@/common';
 import aCode from './a.vue?raw';
 import a from './a.vue'
 import pictures from './pictures.vue'
+import notepad from './notepad.vue'
 
 </script>
 
