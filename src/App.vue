@@ -1,7 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { Header } from './common';
 </script>
 <template>
+  <Header />
   <div class="wrapper">
     <div class="left-menu">
       <RouterLink to="/Vue3">vue3语法规则</RouterLink>
