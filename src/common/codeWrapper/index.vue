@@ -51,5 +51,6 @@ setHtmlResult();
   border: 1px solid #ccc;
   border-radius: 4px;
   min-width: 60px;
+  padding: 2px 6px;
 }
 </style>
