@@ -4,10 +4,10 @@
             <img :src="logoUrl" alt="">
         </div>
         <div class="right">
-            <div class="tabs">
-                <span :class="currentJSclass" id="js" @click="onTabClick">JS</span>
-                <span :class="currentVue3class" id="Vue3" @click="onTabClick">Vue3</span>
-                <span :class="currentElementclass" id="Element" @click="onTabClick">Element +</span>
+            <div class="tabs" @click="onTabClick">
+                <span :class="currentclass('js')" id="js">JS</span>
+                <span :class="currentclass('Vue3')" id="Vue3">Vue3</span>
+                <span :class="currentclass('Element')" id="Element">Element +</span>
             </div>
             <div class="links">
                 <!-- list map -->
@@ -22,17 +22,13 @@
 <script setup>
 import { ref } from 'vue';
 const currentSelected = ref()
-const currentJSclass = ref()
-const currentVue3class = ref()
-const currentElementclass = ref()
-
 const onTabClick = (e) => {
-    console.log('id', e.target.id)
-    console.log('id of element', e.target.id)
-    currentSelected.value = e.target.id
-    currentJSclass.value = e.target.id === 'js' ? 'selected' : ''
-    currentVue3class.value = e.target.id === 'Vue3' ? 'selected' : ''
-    currentElementclass.value = e.target.id === 'Element' ? 'selected' : ''
+    const id = e.target.id
+    currentSelected.value = id
+}
+
+const currentclass = (id) => {
+    return currentSelected.value === id ? 'selected' : ''
 }
 // BOM 知识点
 const logoUrl = "/logo.png";
