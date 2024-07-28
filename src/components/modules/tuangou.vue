@@ -2,7 +2,7 @@
     <div class="tg">
         <h5 style="margin-left: 28px;">精品团购</h5>
         <div class="tgone tcbox">
-            <span><img src="@/assets/images/tc1.png" /></span>
+            <span><img src="/images/tc1.png" /></span>
             <span></span>
         </div>
     </div>

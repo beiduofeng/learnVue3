@@ -1,5 +1,6 @@
 <template>
-    <img src="../../assets/images/2.jpeg">
+    <img src="/images/1.jpeg" alt="">
+    <!-- <img src="../../assets/images/2.jpeg"> -->
     <!-- <img :src=`../../assets/images/2.jpeg`> -->
     <!-- v-bind -->
     {{ number }}
@@ -14,10 +15,10 @@
 <script setup>
 import { ref, watch } from 'vue';
 const number = ref(1)
-let imgSrc = `http://127.0.0.1:5173/src/assets/images/${number.value}.jpeg`
+let imgSrc = `/images/${number.value}.jpeg`
 
 watch(number, (newValue, oldValue) => {
-    imgSrc = `http://127.0.0.1:5173/src/assets/images/${newValue}.jpeg`
+    imgSrc = `/images/${newValue}.jpeg`
 
 })
 const prev = () => {

@@ -11,8 +11,8 @@
             </div>
             <div class="links">
                 <!-- list map -->
-                <a class="github-box" target="_blank" href="https://github.com/beiduofeng/learnVue3">
-                    <img src="../../assets/github.svg">
+                <a class="github-box" target="_blank" :href="githubUrl">
+                    <img :src="githuLogoUrl">
                 </a>
             </div>
 
@@ -21,8 +21,9 @@
 </template>
 <script setup>
 // BOM 知识点
-const host = "http://" + window.location.host
-const logoUrl = host + "/src/assets/logo.png";
+const logoUrl = "/logo.png";
+const githuLogoUrl = '/github.svg';
+const githubUrl = 'https://github.com/beiduofeng/learnVue3';
 </script>
 
 <style scoped>
