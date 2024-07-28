@@ -5,9 +5,9 @@
         </div>
         <div class="right">
             <div class="tabs">
-                <span>JS</span>
-                <span>Vue3</span>
-                <span>Element +</span>
+                <span :class="currentJSclass" id="js" @click="() => onTabClick('js')">JS</span>
+                <span :class="currentVue3class" id="Vue3" @click="() => onTabClick('Vue3')">Vue3</span>
+                <span :class="currentElementclass" id="Element" @click="() => onTabClick('Element')">Element +</span>
             </div>
             <div class="links">
                 <!-- list map -->
@@ -20,6 +20,19 @@
     </div>
 </template>
 <script setup>
+import { ref } from 'vue';
+const currentSelected = ref()
+const currentJSclass = ref(currentSelected.value === 'js' ? 'selected' : '')
+const currentVue3class = ref(currentSelected.value === 'Vue3' ? 'selected' : '')
+const currentElementclass = ref(currentSelected.value === 'Element' ? 'selected' : '')
+
+const onTabClick = (id) => {
+    console.log('id', id)
+    currentSelected.value = id
+    currentJSclass.value = currentSelected.value === 'js' ? 'selected' : ''
+    currentVue3class.value = currentSelected.value === 'Vue3' ? 'selected' : ''
+    currentElementclass.value = currentSelected.value === 'Element' ? 'selected' : ''
+}
 // BOM 知识点
 const logoUrl = "/logo.png";
 const githuLogoUrl = '/github.svg';
@@ -54,6 +67,11 @@ const githubUrl = 'https://github.com/beiduofeng/learnVue3';
     margin-right: 20px;
     display: inline-block;
     line-height: 28px;
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 1px solid #db2424;
 }
 
 .github-box img {
