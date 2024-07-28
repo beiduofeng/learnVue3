@@ -1,10 +1,10 @@
 <template>
     <div id="concent">
         <div id="left">
-            <RouterLink to="/11">列表添加数据</RouterLink>
-            <RouterLink to="/12">轮播图</RouterLink>
-            <RouterLink to="/13">记事本</RouterLink>
-            <RouterLink to="/14">购物车</RouterLink>
+            <RouterLink to="/a">列表添加数据</RouterLink>
+            <RouterLink to="/b">轮播图</RouterLink>
+            <RouterLink to="/c">记事本</RouterLink>
+            <RouterLink to="/d">购物车</RouterLink>
 
 
         </div>

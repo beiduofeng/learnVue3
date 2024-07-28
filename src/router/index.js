@@ -57,27 +57,27 @@ export const routeConfigs = [
     component: HelloWorld,
   },
   {
-    path: "/a",
+    path: "/sjy",
     component: a,
 
   },
   {
-    path: "/11",
+    path: "/a",
     component: person,
 
   },
   {
-    path: "/12",
+    path: "/b",
     component: pictures,
 
   },
   {
-    path: "/13",
+    path: "/c",
     component: notepad,
 
   },
   {
-    path: "/14",
+    path: "/d",
     component: shopping,
 
   },

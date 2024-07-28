@@ -18,6 +18,9 @@ const reset = () => {
 const shuffle = () => {
 
 }
+const remove = (item) => {
+
+}
 
 </script>
 <style scoped></style>
