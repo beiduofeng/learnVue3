@@ -67,8 +67,12 @@ const githubUrl = 'https://github.com/beiduofeng/learnVue3';
     cursor: pointer;
 }
 
+.tabs span:hover {
+    color: #358be1;
+}
+
 .selected {
-    border-bottom: 1px solid #db2424;
+    border-bottom: 2px solid #2419ec;
 }
 
 .github-box img {
