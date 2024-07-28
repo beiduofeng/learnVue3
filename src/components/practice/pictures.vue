@@ -1,7 +1,9 @@
 <template>
-    <!-- <img src="../../assets/images/2.jpeg"> -->
+    <img src="../../assets/images/2.jpeg">
     <!-- <img :src=`../../assets/images/2.jpeg`> -->
-    <img :src="`../../assets/images/${number}.jpeg`" />
+    <!-- v-bind -->
+    {{ number }}
+    <img :src="imgSrc" />
     <div id="box">
         <el-button type="success" @click="prev">上一张</el-button>
         <el-button type="success" @click="next">下一张</el-button>
@@ -10,8 +12,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-let number = ref(1)
+import { ref, watch } from 'vue';
+const number = ref(1)
+let imgSrc = `http://127.0.0.1:5173/src/assets/images/${number.value}.jpeg`
+
+watch(number, (newValue, oldValue) => {
+    imgSrc = `http://127.0.0.1:5173/src/assets/images/${newValue}.jpeg`
+
+})
 const prev = () => {
     number.value--
     if (number.value == 0) {
@@ -25,6 +33,12 @@ const next = () => {
         number.value = 1
     }
 }
+
+// { {  } }
+
+// js 模板字符串, es6
+
+
 </script>
 
 <style scoped>
