@@ -5,9 +5,9 @@
         </div>
         <div class="right">
             <div class="tabs">
-                <span :class="currentJSclass" id="js" @click="() => onTabClick('js')">JS</span>
-                <span :class="currentVue3class" id="Vue3" @click="() => onTabClick('Vue3')">Vue3</span>
-                <span :class="currentElementclass" id="Element" @click="() => onTabClick('Element')">Element +</span>
+                <span :class="currentJSclass" id="js" @click="onTabClick">JS</span>
+                <span :class="currentVue3class" id="Vue3" @click="onTabClick">Vue3</span>
+                <span :class="currentElementclass" id="Element" @click="onTabClick">Element +</span>
             </div>
             <div class="links">
                 <!-- list map -->
@@ -22,16 +22,17 @@
 <script setup>
 import { ref } from 'vue';
 const currentSelected = ref()
-const currentJSclass = ref(currentSelected.value === 'js' ? 'selected' : '')
-const currentVue3class = ref(currentSelected.value === 'Vue3' ? 'selected' : '')
-const currentElementclass = ref(currentSelected.value === 'Element' ? 'selected' : '')
+const currentJSclass = ref()
+const currentVue3class = ref()
+const currentElementclass = ref()
 
-const onTabClick = (id) => {
-    console.log('id', id)
-    currentSelected.value = id
-    currentJSclass.value = currentSelected.value === 'js' ? 'selected' : ''
-    currentVue3class.value = currentSelected.value === 'Vue3' ? 'selected' : ''
-    currentElementclass.value = currentSelected.value === 'Element' ? 'selected' : ''
+const onTabClick = (e) => {
+    console.log('id', e.target.id)
+    console.log('id of element', e.target.id)
+    currentSelected.value = e.target.id
+    currentJSclass.value = e.target.id === 'js' ? 'selected' : ''
+    currentVue3class.value = e.target.id === 'Vue3' ? 'selected' : ''
+    currentElementclass.value = e.target.id === 'Element' ? 'selected' : ''
 }
 // BOM 知识点
 const logoUrl = "/logo.png";
