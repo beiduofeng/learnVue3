@@ -7,6 +7,9 @@
             <div class="time">
                 <span> {{ formattedDate }}</span>
                 <span> {{ currentTime }}</span>
+                <!-- 地区选择 -->
+                <span>地区<input type="text" name="" id=""></span>
+                <span> {{ weather }},{{ windDirection }}{{ windPower }}</span>
 
 
             </div>
@@ -27,6 +30,8 @@
 </template>
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
+import axios from 'axios';
+import { result } from 'lodash-es';
 //时钟
 const currentTime = ref(new Date().toLocaleTimeString());
 function updateTime() {
@@ -34,8 +39,8 @@ function updateTime() {
 }
 onMounted(() => {
     const intervalId = setInterval(updateTime, 1000); // 更新时间每秒一次
-    const intervalId1 = setInterval(formattedDate.value, 24 * 60 * 60 * 1000);
-    // 组件卸载时清除定时器
+    const intervalId1 = setInterval(formattedDate.value, 24 * 60 * 60 * 1000);//一天一gengxin
+    //组件卸载时清除定时器
     onUnmounted(() => {
         clearInterval(intervalId);
         clearInterval(intervalId1);
@@ -52,8 +57,25 @@ const formattedDate = computed(() => {
     return `${year}-${month}-${day}`;
 });
 
+let weather = ''
+let windDirection = ''
+let windPower = ''
+const getWeather = (cityCode) => {
 
+    axios({
+        url: 'http://hmajax.itheima.net/api/weather',
+        params: {
+            city: cityCode
+        }
+    }).then(result => {
+        console.log(result.data.data);
+        weather = result.data.data.weather
+        windDirection = result.data.data.windDirection
+        windPower = result.data.data.windPower
 
+    })
+}
+getWeather('110100')
 
 const currentSelected = ref()
 const onTabClick = (e) => {
