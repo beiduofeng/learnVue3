@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { Header } from './common';
+import { Header, Menu } from './common';
 </script>
 <template>
   <Header />
   <div class="wrapper">
+    <Menu />
     <div class="left-menu">
       <RouterLink to="/Vue3">vue3语法规则</RouterLink>
       <RouterLink to="/helloworld">helloworld</RouterLink>
@@ -42,6 +43,7 @@ import { Header } from './common';
 .wrapper {
   width: 100vw;
   display: flex;
+  margin-top: 2px;
 }
 
 .left-menu {
