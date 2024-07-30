@@ -4,6 +4,12 @@
             <img :src="logoUrl" alt="">
         </div>
         <div class="right">
+            <div class="time">
+                <span> {{ formattedDate }}</span>
+                <span> {{ currentTime }}</span>
+
+
+            </div>
             <div class="tabs" @click="onTabClick">
                 <span :class="currentclass('js')" id="js">JS</span>
                 <span :class="currentclass('Vue3')" id="Vue3">Vue3</span>
@@ -20,7 +26,35 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+//时钟
+const currentTime = ref(new Date().toLocaleTimeString());
+function updateTime() {
+    currentTime.value = new Date().toLocaleTimeString();
+}
+onMounted(() => {
+    const intervalId = setInterval(updateTime, 1000); // 更新时间每秒一次
+    const intervalId1 = setInterval(formattedDate.value, 24 * 60 * 60 * 1000);
+    // 组件卸载时清除定时器
+    onUnmounted(() => {
+        clearInterval(intervalId);
+        clearInterval(intervalId1);
+    });
+});
+
+
+// 创建一个计算属性，用于格式化日期
+const formattedDate = computed(() => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以+1，然后确保是两位数
+    const day = String(today.getDate()).padStart(2, '0'); // 确保日期是两位数
+    return `${year}-${month}-${day}`;
+});
+
+
+
+
 const currentSelected = ref()
 const onTabClick = (e) => {
     const id = e.target.id
@@ -65,6 +99,17 @@ const githubUrl = 'https://github.com/beiduofeng/learnVue3';
     display: inline-block;
     line-height: 28px;
     cursor: pointer;
+}
+
+.time {
+    margin-right: 40px;
+}
+
+.time span {
+    margin-right: 40px;
+    display: inline-block;
+    line-height: 28px;
+
 }
 
 .tabs span:hover {
