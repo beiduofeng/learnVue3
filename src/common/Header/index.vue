@@ -8,8 +8,8 @@
                 <span> {{ formattedDate }}</span>
                 <span> {{ currentTime }}</span>
                 <!-- 地区选择 -->
-                <span>地区<input type="text" @keydown.enter="getcity" v-model="searchcity"></span>
-                <span> {{ weather }},{{ windDirection }}{{ windPower }}</span>
+                <span>地区：<input type="text" @keydown.enter="getcity" v-model="searchcity"></span>
+                <span id="weather"> {{ weather }},{{ windDirection }}{{ windPower }}</span>
 
 
             </div>
@@ -45,6 +45,7 @@ const getcity = (search) => {
         console.log(result.data.data[0].code);
         let searchcityCode = result.data.data[0].code
         getWeather(searchcityCode)
+        searchcity.value = ''
     })
 }
 //getcity('上海')
@@ -164,5 +165,16 @@ const githubUrl = 'https://github.com/beiduofeng/learnVue3';
 
 .links a {
     cursor: pointer;
+}
+
+input {
+    width: 50px;
+    height: 10px;
+}
+
+#weather {
+    padding: 3px;
+    background: linear-gradient(45deg, #e49881, #ed7ca7, #62c5e9, #58d4b7);
+    border-radius: 16%;
 }
 </style>
