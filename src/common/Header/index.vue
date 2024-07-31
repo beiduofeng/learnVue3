@@ -8,7 +8,7 @@
                 <span> {{ formattedDate }}</span>
                 <span> {{ currentTime }}</span>
                 <!-- 地区选择 -->
-                <span>地区<input type="text" name="" id=""></span>
+                <span>地区<input type="text" @keydown.enter="getcity" v-model="searchcity"></span>
                 <span> {{ weather }},{{ windDirection }}{{ windPower }}</span>
 
 
@@ -32,6 +32,22 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 import { result } from 'lodash-es';
+
+//搜索地区
+let searchcity = ref('')
+const getcity = (search) => {
+    axios({
+        url: 'http://hmajax.itheima.net/api/weather/city',
+        params: {
+            city: searchcity.value
+        }
+    }).then(result => {
+        console.log(result.data.data[0].code);
+        let searchcityCode = result.data.data[0].code
+        getWeather(searchcityCode)
+    })
+}
+//getcity('上海')
 //时钟
 const currentTime = ref(new Date().toLocaleTimeString());
 function updateTime() {
@@ -68,7 +84,7 @@ const getWeather = (cityCode) => {
             city: cityCode
         }
     }).then(result => {
-        console.log(result.data.data);
+        //console.log(result.data.data);
         weather = result.data.data.weather
         windDirection = result.data.data.windDirection
         windPower = result.data.data.windPower
