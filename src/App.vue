@@ -2,18 +2,18 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { Header } from './common';
 import { ref, reactive } from 'vue';
-let id = ''
-let isactivecolor = ref(false)
-const cliclcolor = (e) => {
-  console.log(e.target.id);
-  const w = e.taget.id
-  for (let i = 1; i <= 3; i++) {
-    if (w == i.toString) {
-      console.log('===');
-      //isactivecolor.value = true
-    }
-  }
-}
+//列表点击后样式
+// let isactivecolor = ref(false)
+// const cliclcolor = (e) => {
+//   console.log(e.target.id);
+//   const w = e.taget.id
+//   for (let i = 1; i <= 3; i++) {
+//     if (w == i.toString) {
+//       console.log('===');
+//       //isactivecolor.value = true
+//     }
+//   }
+// }
 </script>
 <template>
   <Header />

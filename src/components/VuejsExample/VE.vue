@@ -15,6 +15,7 @@
             <RouterLink to="/12">带过渡动效的模态框</RouterLink>
             <RouterLink to="/13">带过渡动效的列表</RouterLink>
             <RouterLink to="/14">复习</RouterLink>
+            <RouterLink to="/15">知识点查漏补缺</RouterLink>
 
 
         </div>
@@ -46,6 +47,7 @@ import modalbox from './modal.vue'
 import modalboxVue from './modalbox.vue';
 import list from './list.vue'
 import review from './review.vue'
+import review1 from './review1.vue'
 </script>
 
 <style scoped>

@@ -37,6 +37,7 @@ import svg from '@/components/VuejsExample/svg.vue'
 import modalbox from '@/components/VuejsExample/modal.vue'
 import list from '@/components/VuejsExample/list.vue'
 import review from '@/components/VuejsExample/review.vue'
+import review1 from '@/components/VuejsExample/review1.vue'
 
 import a from '@/components/practice/index.vue'
 import person from '@/components/practice/person.vue'
@@ -141,6 +142,10 @@ export const routeConfigs = [
   {
     path: "/14",
     component: review,
+  },
+  {
+    path: "/15",
+    component: review1,
   },
   {
     path: "/aa",

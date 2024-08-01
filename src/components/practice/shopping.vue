@@ -34,6 +34,9 @@
 
 <script setup>
 import { reactive } from 'vue';
+const setjihe = new Set(['1', '2', '3'])
+console.log(setjihe);
+console.log(setjihe[0]);
 const data = reactive({
     selected: false,
     checkboxList: [],
