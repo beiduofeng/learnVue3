@@ -2,6 +2,7 @@
 import type { Component } from "vue";
 import HelloWorld from '@/components/helloworld/index.vue'
 import TodoList from '@/components/ToDoList/index.vue'
+import ToRefs from '@/components/toRefs/index.vue'
 
 
 
@@ -14,8 +15,6 @@ export interface IRouteConfig {
   path?: string;
   // 对应的组件
   component?: Component;
-  // 是否展示在菜单上，页面可能有很多，入口可能是其他页面上的链接
-  onMenu: boolean;
   // 子菜单/子路由 可能有多个
   children?: IRouteConfig[]
 }
@@ -29,23 +28,24 @@ const JSrouteConfigs: IRouteConfig[] = [
 const VueRouteConfigs: IRouteConfig[] = [
   {
     name: '入门基础',
-    onMenu: true,
     children: [
       {
         name: 'helloworld',
-        onMenu: true,
         path: '/helloworld',
         component: HelloWorld
-      }
+      },
+      {
+        name: 'ToRefs',
+        path: '/toRefs',
+        component: ToRefs,
+      },
     ]
   },
   {
     name: "场景练习",
-    onMenu: true,
     children: [
       {
-        name: '代办列表',
-        onMenu: true,
+        name: '待办列表',
         path: '/todolist',
         component: TodoList
       }
