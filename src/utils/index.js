@@ -1,5 +1,24 @@
 import markdownIt from 'markdown-it';
-import { createHighlighter } from 'shiki';
+import { createHighlighter } from 'shiki'
+
+// 代码高亮对象
+const highlighter = await createHighlighter({
+  themes: ['vitesse-light'],
+  langs: ['javascript'],
+});
+
+/**
+ * 同步方法，代码高亮，返回 html 字符串
+ * reference: https://shiki.tmrs.site/guide/install
+ * @param {*} str 
+ * @returns 
+ */
+const getHighlightCodeSync = (str) => {
+  return highlighter.codeToHtml(str, {
+    lang: 'javascript',
+    theme: 'vitesse-light'
+  });
+}
 
 let globalMarkDownInstance = null;
 
@@ -9,7 +28,14 @@ let globalMarkDownInstance = null;
  */
 export const getMarkDownIt = () => {
   if (!globalMarkDownInstance) {
-    globalMarkDownInstance = markdownIt();
+    // reference: https://markdown-it.docschina.org/api/MarkdownIt.html#markdownit-new
+    // markdownIt 需要其他包提供代码高亮能力
+    globalMarkDownInstance = markdownIt({
+      highlight: (str) => {
+        const codeHtml = getHighlightCodeSync(str);
+        return `<div style="font-size: 14px">${codeHtml}</div>`
+      },
+    });
   }
   return globalMarkDownInstance;
 }
@@ -49,3 +75,5 @@ export const getCodeHtml = async (code) => {
     theme: 'vitesse-light'
   }) || '';
 }
+
+
