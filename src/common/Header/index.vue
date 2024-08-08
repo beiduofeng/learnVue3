@@ -10,8 +10,6 @@
                 <!-- 地区选择 -->
                 <span>地区：<input type="text" @keydown.enter="getcity" v-model="searchcity"></span>
                 <span id="weather"> {{ weather }},{{ windDirection }}{{ windPower }}</span>
-
-
             </div>
             <div class="tabs" @click="onTabClick">
                 <span :class="currentclass('js')" id="js">JS</span>
@@ -50,14 +48,14 @@ const getcity = (search) => {
 }
 //getcity('上海')
 //时钟
-const currentTime = ref(new Date().toLocaleTimeString());
+const currentTime = ref();
 function updateTime() {
     currentTime.value = new Date().toLocaleTimeString();
 }
 onMounted(() => {
     const intervalId = setInterval(updateTime, 1000); // 更新时间每秒一次
     const intervalId1 = setInterval(formattedDate.value, 24 * 60 * 60 * 1000);//一天一gengxin
-    //组件卸载时清除定时器
+    组件卸载时清除定时器
     onUnmounted(() => {
         clearInterval(intervalId);
         clearInterval(intervalId1);

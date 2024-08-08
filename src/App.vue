@@ -2,28 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { Header } from './common';
 import { ref, reactive } from 'vue';
-//列表点击后样式
-// let isactivecolor = ref(false)
-// const cliclcolor = (e) => {
-//   console.log(e.target.id);
-//   const w = e.taget.id
-//   for (let i = 1; i <= 3; i++) {
-//     if (w == i.toString) {
-//       console.log('===');
-//       //isactivecolor.value = true
-//     }
-//   }
-// }
 </script>
 <template>
   <Header />
   <div class="wrapper">
     <div class="left-menu">
-      <RouterLink to="/Vue3" id="1" @click="cliclcolor" :class="{ activecolor: isactivecolor }">vue3语法规则
-      </RouterLink>
-      <RouterLink to="/helloworld" id="2" @click="cliclcolor" :class="{ activecolor: isactivecolor }">
-        helloworld</RouterLink>
-      <RouterLink to="/torefs" id="3" @click="cliclcolor" :class="{ activecolor: isactivecolor }">torefs</RouterLink>
+      <RouterLink to="/Vue3">vue3语法规则</RouterLink>
+      <RouterLink to="/helloworld"> helloworld</RouterLink>
+      <RouterLink to="/torefs">torefs</RouterLink>
       <RouterLink to="/p2c">父传子</RouterLink>
       <RouterLink to="/computed">computed计算属性</RouterLink>
       <RouterLink to="/Computerexaple">computed例子</RouterLink>
