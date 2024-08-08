@@ -1,6 +1,7 @@
 <template>
     <div id="concent">
         <div id="left">
+            <RouterLink to="/test">测试</RouterLink>
             <RouterLink to="/a">列表添加数据</RouterLink>
             <RouterLink to="/b">轮播图</RouterLink>
             <RouterLink to="/c">记事本</RouterLink>
@@ -27,6 +28,7 @@ import a from './a.vue'
 import pictures from './pictures.vue'
 import notepad from './notepad.vue'
 import shopping from './shopping.vue'
+import test from './test.vue'
 
 </script>
 
