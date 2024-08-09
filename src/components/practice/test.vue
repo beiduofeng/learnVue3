@@ -1,6 +1,6 @@
 <template>
     <p>测试</p>
-    <p :class="activeClass" @click="changeColor(activeClass, $event)" v-for="(item, index) in persons" :key="index">
+    <p :class="ac" @click="changeColor(activeClass, $event)" v-for="(item, index) in persons" :key="index">
         {{
             item }}</p>
 </template>
@@ -8,18 +8,19 @@
 <script setup>
 import { reactive, ref } from 'vue';
 let persons = reactive(['aaa', 'sss', 'ddd'])
-let activeClass = ref('commom')
-const changeColor = (activeClass, e) => {
+let activeClass = ref('co')
+let ac = activeClass.value
+const changeColor = (ac, e) => {
     console.log(e);
-    activeClass = 'red'
-    console.log(activeClass);
+    ac = 'red'
+    console.log(ac);
 
 }
 </script>
 
 <style scoped>
-.common {
-    color: antiquewhite;
+.co {
+    color: rgb(230, 146, 37);
 }
 
 .red {
