@@ -46,6 +46,12 @@ import notepad from '@/components/practice/notepad.vue'
 import shopping from '@/components/practice/shopping.vue'
 import test from '@/components/practice/test.vue'
 
+
+import { getRoutes } from './utils';
+import { VueRouteConfigs } from './routeConfig';
+const vueRoutes = getRoutes(VueRouteConfigs);
+console.log('vueRoutes', vueRoutes);
+
 /** @file 路由相关的配置 */
 
 /**
@@ -264,7 +270,7 @@ export const routeConfigs = [
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes: routeConfigs
+  routes: vueRoutes
 });
 
 export default router

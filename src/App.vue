@@ -1,36 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import { Header } from './common';
-import { ref, reactive } from 'vue';
+import { RouterView } from 'vue-router'
+import { Header, Menu } from './common';
 </script>
 <template>
   <Header />
   <div class="wrapper">
-    <div class="left-menu">
-      <RouterLink to="/Vue3">vue3语法规则</RouterLink>
-      <RouterLink to="/helloworld"> helloworld</RouterLink>
-      <RouterLink to="/torefs">torefs</RouterLink>
-      <RouterLink to="/p2c">父传子</RouterLink>
-      <RouterLink to="/computed">computed计算属性</RouterLink>
-      <RouterLink to="/Computerexaple">computed例子</RouterLink>
-      <RouterLink to="/WatchRective">监测rective对象型数据</RouterLink>
-      <RouterLink to="/watchRef">监测ref对象型数据</RouterLink>
-      <RouterLink to="/refVsRective">ref与rective区别</RouterLink>
-      <RouterLink to="/deepWatch">深层监测对象中的某个属性</RouterLink>
-      <RouterLink to="/Reactive">reactive创建响应式对象</RouterLink>
-      <RouterLink to="/watchEffect">watchEffect</RouterLink>
-      <RouterLink to="/Ref">ref创建响应式对象</RouterLink>
-      <RouterLink to="/Fa">ref唯一标识</RouterLink>
-      <RouterLink to="/watchRefPrimitiveType">watch监视ref基本类型数据</RouterLink>
-      <RouterLink to="/Hooks">自定义Hooks</RouterLink>
-      <RouterLink to="/usePinia">usePinia</RouterLink>
-      <RouterLink to="/todolist">ToDoList</RouterLink>
-      <RouterLink to="/father">byvalue</RouterLink>
-      <RouterLink to="/aa">点菜</RouterLink>
-      <RouterLink to="/VE">Vuejs示例</RouterLink>
-      <RouterLink to="/practive">作业练习</RouterLink>
-
-    </div>
+    <Menu />
     <div class="content-wrapper">
       <div class="content">
         <RouterView />
@@ -47,9 +22,10 @@ import { ref, reactive } from 'vue';
 .wrapper {
   width: 100vw;
   display: flex;
+  margin-top: 2px;
 }
 
-.left-menu {
+<<<<<<< HEAD .left-menu {
   width: 200px;
   min-height: 600px;
   overflow-y: auto;
@@ -72,15 +48,16 @@ a:active {
   color: #d50b0b;
 }
 
-.content-wrapper {
-  padding: 12px;
+=======>>>>>>>feat/sunjs_route_menu .content-wrapper {
+  padding: 12px 64px;
   flex-grow: 1;
 }
 
 .content {
-  /* border: 1px solid tomato; */
+  border: 1px solid #eee;
   background-color: #e8f6eeee;
   width: 100%;
   min-height: 600px;
+  padding: 12px;
 }
 </style>
