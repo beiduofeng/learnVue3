@@ -2,7 +2,7 @@
     <div class="query-weather">
         <!-- 地区选择 -->
         <span>城市名：</span>
-        <input type="text" @keydown.enter="getcity" v-model="searchcity">
+        <input type="text" @keydown.enter="getCity" v-model="searchCity">
         <span class="current-result"> {{ weatherResultString }} </span>
         <div class="result">
             查询结果
@@ -41,26 +41,26 @@ const getWeather = (cityCode) => {
         weatherResult.windDirection = result.data.data.windDirection
         weatherResult.windPower = result.data.data.windPower
         console.log(weatherResult);
-        records.push({ '城市': searchcity.value, '天气': weatherResultString.value })
-        searchcity.value = ''
+        records.push({ '城市': searchCity.value, '天气': weatherResultString.value })
+        searchCity.value = ''
     })
 
 
 }
 //搜索地区
-let searchcity = ref('')
+let searchCity = ref('')
 let records = []
 
-const getcity = (search) => {
+const getCity = (search) => {
     axios({
         url: 'http://hmajax.itheima.net/api/weather/city',
         params: {
-            city: searchcity.value
+            city: searchCity.value
         }
     }).then(result => {
         console.log(result.data.data[0].code);
-        let searchcityCode = result.data.data[0].code
-        getWeather(searchcityCode)
+        let searchCityCode = result.data.data[0].code
+        getWeather(searchCityCode)
 
     })
 }
