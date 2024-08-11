@@ -46,6 +46,7 @@ import pictures from '@/components/practice/pictures.vue'
 import notepad from '@/components/practice/notepad.vue'
 import shopping from '@/components/practice/shopping.vue'
 import test from '@/components/practice/test.vue'
+import Weather from "@/components/practice/weather.vue";
 
 
 
@@ -83,6 +84,7 @@ const VueRouteConfigs: IRouteConfig[] = [
         path: '/toRefs',
         component: ToRefs,
       },
+
       {
         name: 'vue3代码格式',
         path: "/vue3",
@@ -182,7 +184,12 @@ const VueRouteConfigs: IRouteConfig[] = [
         name: '待办列表',
         path: '/todolist',
         component: TodoList
-      }
+      },
+      {
+        name: '天气查询',
+        path: '/weather',
+        component: Weather,
+      },
     ]
   }
 ]
