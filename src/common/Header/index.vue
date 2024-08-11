@@ -55,7 +55,7 @@ function updateTime() {
 onMounted(() => {
     const intervalId = setInterval(updateTime, 1000); // 更新时间每秒一次
     const intervalId1 = setInterval(formattedDate.value, 24 * 60 * 60 * 1000);//一天一gengxin
-    组件卸载时清除定时器
+    // 组件卸载时清除定时器
     onUnmounted(() => {
         clearInterval(intervalId);
         clearInterval(intervalId1);

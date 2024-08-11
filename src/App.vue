@@ -48,7 +48,7 @@ a:active {
   color: #d50b0b;
 }
 
-=======>>>>>>>feat/sunjs_route_menu .content-wrapper {
+.content-wrapper {
   padding: 12px 64px;
   flex-grow: 1;
 }
