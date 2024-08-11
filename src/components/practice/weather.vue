@@ -1,22 +1,33 @@
 <template>
-    <div class="time">
+    <div class="query-weather">
         <!-- 地区选择 -->
-        <span>地区：<input type="text" @keydown.enter="getcity" v-model="searchcity"></span>
-        <span id="weather"> {{ weather }},{{ windDirection }}{{ windPower }}</span>
-        <ul>
-            <li v-for="item in records" :key="item">{{ item }}</li>
-        </ul>
+        <span>城市名：</span>
+        <input type="text" @keydown.enter="getcity" v-model="searchcity">
+        <span class="current-result"> {{ weatherResultString }} </span>
+        <div class="result">
+            查询结果
+            <ul>
+                <li v-for="item in records" :key="item">{{ item }}</li>
+            </ul>
+        </div>
+
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { reactive, ref, computed } from 'vue';
 import axios from 'axios';
 
+let weatherResult = reactive({}, false);
 
-let weather = ''
-let windDirection = ''
-let windPower = ''
+const weatherResultString = computed(() => {
+    return (weatherResult.weather || '-') + ' '
+        + (weatherResult.windDirection || '-') + ' '
+        + (weatherResult.windPower || '-');
+});
+
+console.log('weatherResultString', weatherResultString)
+
 
 const getWeather = (cityCode) => {
     axios({
@@ -25,11 +36,13 @@ const getWeather = (cityCode) => {
             city: cityCode
         }
     }).then(result => {
-        //console.log(result.data.data);
-        weather = result.data.data.weather
-        windDirection = result.data.data.windDirection
-        windPower = result.data.data.windPower
-
+        console.log(result.data.data);
+        weatherResult.weather = result.data.data.weather
+        weatherResult.windDirection = result.data.data.windDirection
+        weatherResult.windPower = result.data.data.windPower
+        console.log(weatherResult);
+        records.push({ '城市': searchcity.value, '天气': weatherResultString.value })
+        searchcity.value = ''
     })
 
 
@@ -37,6 +50,7 @@ const getWeather = (cityCode) => {
 //搜索地区
 let searchcity = ref('')
 let records = []
+
 const getcity = (search) => {
     axios({
         url: 'http://hmajax.itheima.net/api/weather/city',
@@ -47,28 +61,24 @@ const getcity = (search) => {
         console.log(result.data.data[0].code);
         let searchcityCode = result.data.data[0].code
         getWeather(searchcityCode)
-        records.push({ '地区': searchcity.value, '天气': weather + '-' + windDirection + '-' + windPower })
-        searchcity.value = ''
+
     })
 }
 </script>
 
 <style scoped>
-.tabs span {
-    margin-right: 20px;
-    display: inline-block;
-    line-height: 28px;
-    cursor: pointer;
-}
-
-.time {
+.query-weather {
     margin-right: 40px;
 }
 
-.time span {
-    margin-right: 40px;
-    display: inline-block;
-    line-height: 28px;
+.current-result {
+    margin-left: 20px;
+}
 
+.result {
+    margin: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 </style>
