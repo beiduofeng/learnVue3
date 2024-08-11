@@ -6,7 +6,7 @@
           <template #title>
             <span>{{ item.name }}</span>
           </template>
-          <el-menu-item :index="getElMenuItemIndex(index, innerIndex)" v-for="(innerItem, innerIndex) in item.children"
+          <el-menu-item :index="index + '-' + innerIndex" v-for="(innerItem, innerIndex) in item.children"
             :key="innerItem.name">
             <RouterLink :to="innerItem.path">{{ innerItem.name }}</RouterLink>
           </el-menu-item>
@@ -20,16 +20,7 @@
 import { RouterLink } from 'vue-router'
 import { VueRouteConfigs } from '@/router/routeConfig';
 
-/**
- * 拼接 el-menu-item 的 index
- * @param outer 
- * @param inner 
- */
-const getElMenuItemIndex = (outer: number, inner: number) => {
-  return `${outer + 1}-${inner + 1}`
-}
 </script>
-
 
 <style scoped>
 .menu-row {
