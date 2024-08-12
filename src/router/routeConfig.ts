@@ -18,7 +18,6 @@ import vue3 from '@/components/vue3/index.vue'
 import hooks from '@/components/hooks/indev.vue'
 import watchRefPrimitiveType from '@/components/watchRefPrimitiveType/index.vue'
 import usepinia from '@/components/usePinia/index.vue'
-import todolist from '@/components/ToDoList/index.vue'
 import father from '@/components/byvalue/index.vue'
 import aa from '@/components/modules/index.vue'
 import practive from '@/components/practice/index.vue'
@@ -49,8 +48,6 @@ import test from '@/components/practice/test.vue'
 import Weather from "@/components/practice/weather.vue";
 
 
-
-
 // ts 类型定义，路由配置对象都有哪些属性，对应的值都是什么类型
 // 注意这里 属性: 类型 之后是分号
 export interface IRouteConfig {
@@ -78,6 +75,21 @@ const VueRouteConfigs: IRouteConfig[] = [
         name: '你好世界',
         path: '/helloworld',
         component: HelloWorld
+      },
+      {
+        name: '传值',
+        path: '/father',
+        component: father
+      },
+      {
+        name: 'aa',
+        path: '/aa',
+        component: aa
+      },
+      {
+        name: '监测',
+        path: '/watchRefPrimitiveType',
+        component: watchRefPrimitiveType
       },
       {
         name: 'ToRefs',
@@ -180,6 +192,106 @@ const VueRouteConfigs: IRouteConfig[] = [
   {
     name: "场景练习",
     children: [
+      {
+        name: 'helloworld',
+        path: '/helloworld',
+        component: helloworld,
+      },
+      {
+        name: '添加列表信息',
+        path: '/person',
+        component: person,
+      },
+      {
+        name: '图片轮播',
+        path: '/pictures',
+        component: pictures,
+      },
+      {
+        name: '编辑器',
+        path: '/notepad',
+        component: notepad,
+      },
+      {
+        name: '购物车',
+        path: '/shopping',
+        component: shopping,
+      },
+      {
+        name: 'test',
+        path: '/test',
+        component: test,
+      },
+      {
+        name: '用户输入处理',
+        path: '/userInput',
+        component: userInput,
+      },
+      {
+        name: '属性绑定',
+        path: '/attributeBinding',
+        component: attributeBinding,
+      },
+      {
+        name: '条件与循环',
+        path: '/conditionsCycles',
+        component: conditionsCycles,
+      },
+      {
+        name: '表单合集',
+        path: '/formBinding',
+        component: formBinding,
+      },
+      {
+        name: '简单组件',
+        path: '/simpleComponents',
+        component: simpleComponents,
+      },
+      // {
+      //   name: 'markdown编辑器',
+      //   path: '/markdownEditor',
+      //   component: markdownEditor,
+      // },
+      {
+        name: '时钟',
+        path: '/getdata',
+        component: getdata,
+      },
+      {
+        name: '网格数据查找',
+        path: '/grid',
+        component: grid,
+      },
+      {
+        name: '树状图',
+        path: '/tree',
+        component: tree,
+      },
+      {
+        name: 'svg图像',
+        path: '/svg',
+        component: svg,
+      },
+      {
+        name: '盒子显示与隐藏',
+        path: '/modalbox',
+        component: modalbox,
+      },
+      {
+        name: '列表',
+        path: '/list',
+        component: list,
+      },
+      {
+        name: '复习',
+        path: '/review',
+        component: review,
+      },
+      {
+        name: '再复习',
+        path: '/review1',
+        component: review1,
+      },
       {
         name: '待办列表',
         path: '/todolist',
