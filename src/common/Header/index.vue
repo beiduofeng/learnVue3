@@ -5,9 +5,9 @@
         </div>
         <div class="right">
             <div class="tabs" @click="onTabClick">
-                <span :class="currentClass('js')" id="js">JS</span>
-                <span :class="currentClass('Vue3')" id="Vue3">Vue3</span>
-                <span :class="currentClass('Element')" id="Element">Element +</span>
+                <span v-for="item in spans" :key="item.id" :id="item.id" :class='currentClass(item.id)'>
+                    {{ item.name }}
+                </span>
             </div>
             <div class="links">
                 <!-- list map -->
@@ -23,9 +23,23 @@ import { ref } from 'vue';
 const logoUrl = "/logo.png";
 const githubLogoUrl = '/github.svg';
 const githubUrl = 'https://github.com/beiduofeng/learnVue3';
+let spans = ref([
+    {
+        id: '1',
+        name: 'JS',
+    },
+    {
+        id: '2',
+        name: 'Vue3',
+    },
+    {
+        id: '3',
+        name: 'Element+',
+    },
+])
 
 // 当前选中的 tab 的 id
-const currentSelected = ref()
+const currentSelected = ref('1')
 
 /**
  * 将所触发点击事件的span标签的id名赋值给currentSelected
@@ -42,6 +56,7 @@ const onTabClick = (e) => {
  */
 const currentClass = (id) => {
     return currentSelected.value === id ? 'selected' : ''
+
 }
 </script>
 <style scoped>
